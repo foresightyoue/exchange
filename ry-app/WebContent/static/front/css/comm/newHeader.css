@@ -1,0 +1,702 @@
+@charset "utf-8";
+/********************header***************/
+.coin_25 {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-size: 25px;
+    float: left
+}
+
+.coin_bcc_25 {
+    background-position: 0 0
+}
+
+.coin_eth_25 {
+    background-position: 0 -25px
+}
+
+.coin_etc_25 {
+    background-position: 0 -50px
+}
+
+.coin_ltc_25 {
+    background-position: 0 -75px
+}
+
+.coin_btc_25 {
+    background-position: 0 -75pt
+}
+
+.coin_ugt_25 {
+    background-position: 0 -126px
+}
+
+.coin_eos_25 {
+    background-position: 0 -155px
+}
+
+.coin_ico_25 {
+    background-position: 0 -180px
+}
+
+.coin_btk_25 {
+    background-position: 0 -207px
+}
+
+.coin_qtum_25 {
+    background-position: 0 -232px
+}
+
+.coin_btm_25 {
+    background-position: 0 -258px
+}
+
+.coin_xnc_25 {
+    background-position: 0 -282px
+}
+
+.coin_ipc_25 {
+    background-position: 0 -306px
+}
+
+.coin_bac_25 {
+    background-position: 0 -328px
+}
+
+.coin_rep_25 {
+    background-position: 0 -355px
+}
+
+.coin_dgd_25 {
+    background-position: 0 -379px
+}
+
+.coin_pay_25 {
+    background-position: 0 -403px
+}
+
+.coin_omg_25 {
+    background-position: 0 -427px
+}
+
+.coin_lun_25 {
+    background-position: 0 -453px
+}
+
+.coin_gnt_25 {
+    background-position: 0 -477px
+}
+
+.coin_1st_25,.coin_firstblood_25 {
+    background-position: 0 -501px
+}
+
+.coin_tic_25 {
+    background-position: 0 -526px
+}
+
+.coin_elc_25 {
+    background-position: 0 -555px
+}
+
+.coin_hcc_25 {
+    background-position: 0 -583px
+}
+
+.coin_xas_25 {
+    background-position: 0 -611px
+}
+
+.coin_ans_25,.coin_neo_25 {
+    background-position: 0 -638px
+}
+
+.coin_act_25 {
+    background-position: 0 -666px
+}
+
+.coin_ytc_25 {
+    background-position: 0 -692px
+}
+
+.coin_peb_25 {
+    background-position: 0 -721px
+}
+
+.coin_pgc_25 {
+    background-position: 0 -750px
+}
+
+.coin_hlb_25 {
+    background-position: 0 -778px
+}
+
+.coin_rss_25 {
+    background-position: 0 -806px
+}
+
+.coin_ktc_25 {
+    background-position: 0 -834px
+}
+
+.coin_mryc_25 {
+    background-position: 0 -863px
+}
+
+.coin_mcc_25 {
+    background-position: 0 -892px
+}
+
+.coin_ven_25 {
+    background-position: 0 -918px
+}
+
+.coin_gcs_25 {
+    background-position: 0 -945px
+}
+
+.coin_skt_25 {
+    background-position: 0 -973px
+}
+
+.coin_gec_25 {
+    background-position: 0 -1002px
+}
+
+.coin_tbc_25 {
+    background-position: 0 -1030px
+} /*11*/
+.sj_bd {
+    position: relative;
+    display: inline-block
+} /*23*/
+.sj_bd {
+    position: relative;
+    display: inline-block
+}
+
+.sj_bd:after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-left: solid 1px #fff;
+    border-top: solid 1px #fff;
+    transform: rotateZ(225deg);
+    -webkit-transform: rotateZ(225deg);
+    -moz-transform: rotateZ(225deg);
+    -o-transform: rotateZ(225deg);
+    -ms-transform: rotateZ(225deg);
+    display: block;
+    position: absolute;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+    -o-transition: .3s ease all;
+    -moz-transition: .3s ease all;
+    -ms-transition: .3s ease all;
+    right: 0;
+    top: 6px
+} /*25*/
+.sj_bd:hover:after {
+    transform: rotateZ(405deg);
+    -webkit-transform: rotateZ(405deg);
+    -moz-transform: rotateZ(405deg);
+    -o-transform: rotateZ(405deg);
+    -ms-transform: rotateZ(405deg);
+    top: 10px
+}
+
+.top-fixed-nav {
+    width: 100%;
+    background: rgba(37, 44, 52, .97);
+    height: 50px;
+    padding-left: 22px;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999; */
+    min-width: 750px;
+}
+
+.logo {
+    float: left;
+    width: 118px;
+    height: 16px;
+    display: inline-block;
+    background-size: auto 16px;
+    margin-right: 10px;
+    margin-top: 17px
+}
+
+.top-fixed-nav li {
+    float: left;
+    line-height: 50px;
+    margin-left: 50px
+}
+
+.top-fixed-nav li a {
+    color: #aaa;
+    font-size: 14px;
+    padding: 0;
+}
+
+.top-fixed-nav .white a {
+    color: #fff
+}
+
+.top-fixed-nav li a:hover {
+    color: #FFF;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.top-fixed-nav li:hover .subNav {
+    display: block;
+}
+
+.subNav {
+    display: none;
+    position: absolute;
+    padding-top: 20px;
+    top: 35px;
+    left: -36px;
+    width: 120px;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 9;
+}
+
+.subNav::before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 34px;
+    display: block;
+    border-bottom: 12px solid #0c1e38;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+}
+
+.subNav div {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #fff;
+    background: #0c1e38;
+}
+
+.subNav div:last-child {
+    border-bottom: none;
+}
+
+.top-fixed-nav  .subNav div a {
+    color: #aaa !important;
+}
+
+.top-fixed-nav  .subNav div:hover{
+    background: rgba(12,30,56,0.9);
+}
+.top-fixed-nav  .subNav div:hover a {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.top-login {
+    height: 26px;
+    margin-top: 14px;
+    margin-right: 22px;
+}
+
+.top-login a.loginBTN {
+    /* width: 48px; */
+    line-height: 24px;
+    text-align: center;
+    margin-left: 4px;
+    display: inline-block;
+    border-radius: 3px;
+    color: #1db3b4;
+    font-size: 12px;
+    padding: 0 10px;
+    border: 1px solid #1db3b4;
+    background: #1db3b4;
+    color: #fff;
+}
+
+.top-login a.loginBTN:last-child {
+    background: #1db3b4;
+    color: #fff;
+}
+
+.top-login a.loginBTN:hover {
+    background: rgba(29, 179, 180,0.5);
+    color: #fff;
+    text-decoration: none
+}
+
+.top-user p,.top-user-email {
+    display: inline-block;
+    color: #FFF;
+    float: right;
+    font-size: 14px;
+    cursor: pointer;
+    padding-right: 16px;
+    padding-bottom: 16px;
+} /*50*/
+
+/*登录后的下拉部分*/
+.top-user p.top-user-email {
+    display: inline-block;
+    color: #FFF;
+    float: right;
+    line-height: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    padding-right: 16px
+}
+
+.userinfo {
+    width: 300px;
+    display: none;
+    z-index: 100;
+    position: absolute;
+    top: 50px;
+    color: #000;
+    right: 0;
+    height: 100%;
+    overflow: hidden
+}
+
+.userinfo-all {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    padding-top: 0;
+    right: 0;
+    box-shadow: #e9e9e9 1px 1px 1px;
+    border-top: none;
+    box-sizing: border-box
+}
+
+.userinfo.selected {
+    display: block;
+    height: 500px
+}
+
+.userinfo-t {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #2f3d46
+}
+
+.userinfo-top {
+    width: 100%;
+    padding-left: 20px;
+    height: 50px;
+    padding-bottom: 20px
+}
+
+.userinfo-top p {
+    font-size: 1.2em;
+    color: #FFF;
+    padding-top: 18px
+}
+
+.userinfo-top p i {
+    font-style: normal;
+    color: #a0a7ad
+}
+
+.userinfo-top p a {
+    margin-left: 18px;
+    font-size: 14px
+}
+
+.userinfo ul {
+    width: 100%;
+    display: block;
+    padding-top: 0;
+    height: 100%;
+    overflow-y: auto;
+    padding-top: 129px;
+    box-sizing: border-box;
+    background: #2f3d46
+}
+
+#userinfo-list {
+    width: 100%
+}
+
+.userinfo ul::-webkit-scrollbar {
+    width: 8px
+}
+
+.userinfo ul::-webkit-scrollbar-track {
+    background-color: #2e3d46
+}
+
+.userinfo ul::-webkit-scrollbar-thumb {
+    background-color: #1d2b33;
+    border-radius: 5px
+}
+
+.userinfo ul li {
+    width: 100%;
+    height: 45px;
+    background: #2e3d46;
+    float: none;
+    line-height: 45px;
+    margin-left: 0;
+    padding-left: 20px;
+    border-bottom: 1px solid #3a4c56
+}
+
+.userinfo-title {
+    width: 100%;
+    height: 35px;
+    background: #1d2b33;
+    line-height: 35px;
+    margin-left: 0;
+    padding-left: 20px;
+    padding-right: 10px
+}
+
+.userinfo ul li>div,.userinfo-title div {
+    width: 84px;
+    display: inline-block;
+    color: #a0a7ad
+}
+
+.userinfo ul li>div.userinfo-Coin,.userinfo-title div.userinfo-Coin {
+    width: 70px
+}
+
+.userinfo ul li>div.userinfo-available,.userinfo-title div.userinfo-available
+    {
+    width: 110px
+}
+
+.userinfo ul li>div.userinfo-frozen,.userinfo-title div.userinfo-frozen
+    {
+    width: 80px
+}
+
+.userinfo ul li>div.userinfo-Coin span {
+    margin-top: -3px;
+    margin-right: 5px
+}
+
+.userinfo-xpmp {
+    background-position: left 0
+}
+
+.userinfo ul .listscoll li>div.userinfo-available {
+    color: #1bc676;
+    font-size: 1.4em
+}
+
+.userinfo ul .listscoll li>div.userinfo-frozen {
+    color: #ff6767;
+    font-size: 1.4em
+}
+/*end header部分*/
+footer {
+    width: 100%;
+    height: auto;
+    background: #252c34;
+    padding: 30px 0;
+    padding-bottom: 60px;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+ul,ol {
+    list-style: none;
+}
+
+#lang {
+    position: relative;
+    width: 112px;
+    height: 50px
+}
+
+.lanague {
+    position: absolute;
+    width: 65px;
+    background: #fff;
+    z-index: 100;
+    right: 20px;
+    display: none;
+    top: 181px
+}
+
+.market_head .lanague {
+    left: 23px
+}
+
+.lanague.selected {
+    display: block
+}
+
+.lanague ul {
+    width: 125px;
+    background: #252c34;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+}
+
+.lanague ul li {
+    height: 36px;
+    width: 120px;
+    border-bottom: 1px solid #1b242b;
+    border-left: none;
+    border-right: none;
+    padding: 0 5px;
+    list-style: none;
+}
+
+.lanague ul li.zh_CN {
+    background: url(/static/front/images/comm/flag.png?v=1) no-repeat 20px
+        11px;
+    margin: 0 2px
+}
+
+.lanague ul li.en_US {
+    background: url(/static/front/images/comm/flag.png?v=1) no-repeat 20px
+        -20px;
+    margin: 0 2px
+}
+
+.lanague ul li.zh_TW {
+    background: url(/static/front/images/comm/flag.png?v=1) no-repeat 20px
+        -50px;
+    margin: 0 2px
+}
+
+.lanague ul li.en_US a,.lanague ul li.zh_TW a,.lanague ul li.zh_CN a {
+    font-size: 1.2em;
+    float: right;
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+    line-height: 36px;
+    margin-right: 6px;
+    padding-left: 48px;
+}
+
+.lang {
+    display: inline-block;
+    padding: 10px 0;
+    margin: 0 0 0 26px
+}
+
+.lang .zh_CN {
+    width: 24px;
+    height: 30px;
+    display: inline-block;
+    background: url(/static/front/images/comm/flag.png?v=1) no-repeat 0 8px
+}
+
+.lang .en_US {
+    width: 24px;
+    height: 30px;
+    display: inline-block;
+    background: url(/static/front/images/comm/flag.png?v=1) no-repeat 0 -23px;
+}
+
+.lang em {
+    color: #fff;
+    font-style: normal;
+    margin: 7px 5px;
+    font-size: 12px
+}
+
+.langss {
+    display: inline-block;
+    padding: 10px 0;
+    margin: 0 0 0 26px
+}
+
+.langss .zh_CN {
+    width: 24px;
+    height: 30px;
+    display: inline-block;
+    background: url(/static/front/images/comm/flag.png?v=1) no-repeat 0 8px
+}
+
+.langss .en_US {
+    width: 24px;
+    height: 30px;
+    display: inline-block;
+    background: url(/static/front/images/comm/flag.png?v=1) no-repeat 0 -23px;
+}
+
+.langss em {
+    color: #fff;
+    font-style: normal;
+    margin: 7px 5px;
+    font-size: 12px
+}
+
+
+.foot2 {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.foot2 li {
+    float: left;
+    width: 18%;
+    color: #fff;
+    list-style: none;
+}
+
+.foot2 li:first-child {
+    margin-right: 25%;
+    padding-left: 515px;
+}
+
+.foot2 li a,.foot2 li p,.foot2 li span {
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    line-height: 26px;
+    color: #aaa
+}
+
+.foot_logo {
+    margin-top: 36px;
+    text-align: center;
+}
+
+.copyright {
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 20px;
+}
+
+.korbit-introduce{
+    background: #fff;
+    
+}
+
+.copyright a {
+    color: #fff;
+    margin-left: 15px;
+}
+
+.copyright span {
+    color: #fff;
+    margin-left: 25px;
+}

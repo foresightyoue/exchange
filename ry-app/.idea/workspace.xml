@@ -1,0 +1,1833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ry-app:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5ef7161f-396f-4777-b5ac-07c3d6e4ae18" name="Default Changelist" comment="后台钱包配置">
+      <change afterPath="$PROJECT_DIR$/WebContent/WEB-INF/lib/security-2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application-master.propertiesbk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test" afterDir="true" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/jdbc.properties" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="557805023">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.18" value="2" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.24" value="2" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.42" value="1" />
+          <entry key="project.open.time.46" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.65" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="16" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="MF" value="1" />
+          <entry key="MODULES/mdl-ry-app" value="1" />
+          <entry key="class" value="148" />
+          <entry key="css" value="4" />
+          <entry key="handlers" value="1" />
+          <entry key="java" value="453" />
+          <entry key="jpg" value="11" />
+          <entry key="js" value="9" />
+          <entry key="jsp" value="58" />
+          <entry key="md" value="2" />
+          <entry key="png" value="6" />
+          <entry key="properties" value="96" />
+          <entry key="propertiesbk" value="1" />
+          <entry key="schemas" value="1" />
+          <entry key="sh" value="1" />
+          <entry key="txt" value="7" />
+          <entry key="xml" value="47" />
+          <entry key="yml" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="148" />
+          <entry key="CSS" value="4" />
+          <entry key="Image" value="17" />
+          <entry key="JAVA" value="453" />
+          <entry key="JSP" value="58" />
+          <entry key="JavaScript" value="9" />
+          <entry key="Manifest" value="1" />
+          <entry key="Markdown" value="2" />
+          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="Properties" value="98" />
+          <entry key="UML" value="1" />
+          <entry key="XML" value="47" />
+          <entry key="YAML" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="class" value="30" />
+          <entry key="css" value="2" />
+          <entry key="java" value="8202" />
+          <entry key="js" value="355" />
+          <entry key="jsp" value="2075" />
+          <entry key="properties" value="420" />
+          <entry key="txt" value="626" />
+          <entry key="xml" value="267" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CLASS" value="30" />
+          <entry key="CSS" value="2" />
+          <entry key="JAVA" value="8202" />
+          <entry key="JSP" value="2075" />
+          <entry key="JavaScript" value="355" />
+          <entry key="PLAIN_TEXT" value="626" />
+          <entry key="Properties" value="420" />
+          <entry key="XML" value="267" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ry-app" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/soul/test/http/config/HttpServerConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="70" column="49" selection-start-line="70" selection-start-column="49" selection-end-line="70" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/utils/ByteBuffUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="15" column="60" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/io/projectreactor/reactor-core/3.2.2.RELEASE/reactor-core-3.2.2.RELEASE.jar!/reactor/core/scheduler/Schedulers.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1000">
+              <caret line="69" column="88" selection-start-line="69" selection-start-column="88" selection-end-line="69" selection-end-column="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/jdk1.8.0_65/src.zip!/java/util/concurrent/ExecutorService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2550">
+              <caret line="136" column="17" selection-start-line="136" selection-start-column="17" selection-end-line="136" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/io/projectreactor/reactor-core/3.2.2.RELEASE/reactor-core-3.2.2.RELEASE.jar!/reactor/core/scheduler/DelegateServiceScheduler.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="30" column="21" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test/thread/ThreadPoolExecutorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="58" column="41" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test/thread/ThreadAvailableProcessorsTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test/thread/ThreadDaemonTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="56" column="33" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/jdk1.8.0_65/src.zip!/java/util/concurrent/ThreadPoolExecutor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29150">
+              <caret line="1223" column="11" selection-start-line="1223" selection-start-column="11" selection-end-line="1223" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/jdk1.8.0_65/src.zip!/java/util/concurrent/Executors.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="493" column="45" lean-forward="true" selection-start-line="493" selection-start-column="45" selection-end-line="493" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>typejsp</find>
+      <find>CacheQuery</find>
+      <find>DaoQuery</find>
+      <find>ChannelPipelineFactory</find>
+      <find>InvokerListenerAdapter</find>
+      <find>fvirtualcointype</find>
+      <find>urlre</find>
+      <find>17370666933</find>
+      <find>.advertisement_list img</find>
+      <find>not find properties</find>
+      <find>application.p</find>
+      <find>ssadmin/createwalletaddress</find>
+      <find>虚拟币操作总表</find>
+      <find>待审核</find>
+      <find>RYH转账</find>
+      <find>m/ryb/RYBWellet</find>
+      <find>test</find>
+      <find>jedis</find>
+      <find>path</find>
+      <find>fIdentityPath</find>
+      <find>fIdentityPath3</find>
+      <find>authInfo</find>
+      <find>path2</find>
+      <find>userAuditList1</find>
+      <find>goUserJSP</find>
+      <find>goArticleJSP</find>
+      <find>/ssadmin/userauditlist1</find>
+      <find>fsc</find>
+      <find>DelegatedScheduledExecutorService</find>
+      <find>ByteBuffer</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>【瑞银钱包】</replace>
+      <replace>vcoindb.dev</replace>
+      <replace>vcoindb_dev</replace>
+      <replace>&quot;vcoindb&quot;</replace>
+      <replace>&quot;vcoindb_dev&quot;</replace>
+      <replace>/app</replace>
+      <replace>catalog = &quot;vcoindb_dev&quot;</replace>
+      <replace>catalog = &quot;vcoindb&quot;</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>D:\huangyong\workspace\ry_exchange\ry\ry-app</dir>
+      <dir>F:\maven\apache-maven-3.5.4\repository\cn\cerc\summer-db\1.4.1\summer-db-1.4.1.jar</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../../../android" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/constant/RedisKeyConstants.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/constant/ZkPathConstants.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/dto/convert/HystrixHandle.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/dto/convert/RateLimiterHandle.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/dto/convert/RewriteHandle.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/dto/convert/SpringCloudHandle.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/dto/convert/WafHandle.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/dto/convert/DivideUpstream.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/dto/convert/DivideHandle.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/dto/convert/DubboHandle.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/dto/zk/AppAuthZkDTO.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/dto/zk/ConditionZkDTO.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/dto/zk/PluginZkDTO.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/dto/zk/RuleZkDTO.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/dto/zk/SelectorZkDTO.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/exception/SoulException.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/HttpMethodEnum.java" />
+        <option value="$PROJECT_DIR$/src/com/huagu/vcoin/main/controller/front/FrontUserJsonController.java" />
+        <option value="$PROJECT_DIR$/src/com/huagu/vcoin/main/controller/admin/UserController.java" />
+        <option value="$PROJECT_DIR$/src/com/huagu/vcoin/util/Utils.java" />
+        <option value="$PROJECT_DIR$/src/com/huagu/vcoin/main/controller/app/AppUserController.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/LoadBalanceEnum.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/MatchModeEnum.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/OperatorEnum.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/ParamTypeEnum.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/PluginEnum.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/PluginTypeEnum.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/ResultEnum.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/RpcTypeEnum.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/SelectorTypeEnum.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/SerializeEnum.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/WafEnum.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/exception/CommonErrorCode.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/exception/SerializerException.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/result/SoulResult.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/utils/DateUtils.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/utils/GSONUtils.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/utils/JsonUtils.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/utils/LogUtils.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/utils/SignUtils.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/utils/SpiLoadFactory.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/utils/UrlUtils.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/utils/UUIDUtils.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/utils/VersionUtils.java" />
+        <option value="$PROJECT_DIR$/test/src/soul/test/http/config/HttpServerConfig.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/test/src/test/java/thread/ThreadTest.java" />
+        <option value="$PROJECT_DIR$/test/test/thread/ThreadAvailableProcessorsTest.java" />
+        <option value="$PROJECT_DIR$/test/test/thread/ThreadTest.java" />
+        <option value="$PROJECT_DIR$/test/test/thread/ThreadDaemonTest.java" />
+        <option value="$PROJECT_DIR$/test/src/org/dromara/soul/common/utils/ByteBuffUtils.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="F:/maven/apache-maven-3.5.4" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="lookForNested" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="ry-app" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="ry-app" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/WebContent/static/front/datafeeds/udf/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="213" />
+    <option name="y" value="201" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ry-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ry-app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ry-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ry-app" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ry-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ry-app" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ry-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ry-app" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ry-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ry-app" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ry-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ry-app" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ry-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ry-app" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="http" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ry-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="ry-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: io.projectreactor:reactor-core:3.2.2.RELEASE" type="70bed36:NamedLibraryElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547070581165" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/WebContent/WEB-INF/lib/websocket-api.jar!/" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.50229883" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="thread" />
+      <recent name="soul.test.http" />
+      <recent name="com.huagu.vcoin.main.controller.app" />
+      <recent name="site.jayun.vcoin.wallet" />
+      <recent name="com.huagu.vcoin.util" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\huangyong\workspace\ry_exchange\ry\ry-app\test\src" />
+      <recent name="D:\huangyong\workspace\ry_exchange\ry\ry-app\WebContent\WEB-INF\lib" />
+      <recent name="D:\huangyong\workspace\ry_exchange\ry\ry-app\src" />
+      <recent name="D:\huangyong\workspace\ry_exchange\ry\ry-app\WebContent\static\front\images\bitbs" />
+      <recent name="D:\huangyong\workspace\ry_exchange\ry\ry-app\WebContent\static\front\images" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.ThreadDaemonTest.testThreadDemo">
+    <configuration name="ThreadDaemonTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="thread.ThreadDaemonTest" />
+      <module name="ry-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="thread.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreadAvailableProcessorsTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ry-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="thread.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="thread" />
+      <option name="MAIN_CLASS_NAME" value="thread.ThreadAvailableProcessorsTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreadDaemonTest.testThreadDemo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ry-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="thread.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="thread" />
+      <option name="MAIN_CLASS_NAME" value="thread.ThreadDaemonTest" />
+      <option name="METHOD_NAME" value="testThreadDemo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreadTest.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ry-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="thread.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="thread" />
+      <option name="MAIN_CLASS_NAME" value="thread.ThreadTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreadTest.testSynchronousQueueOutOfMixPoolSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ry-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="thread.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="thread" />
+      <option name="MAIN_CLASS_NAME" value="thread.ThreadTest" />
+      <option name="METHOD_NAME" value="testSynchronousQueueOutOfMixPoolSize" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="jx-app" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.12" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:80/" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="ry-app:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_ry-app_7" />
+        <option name="HTTP_PORT" value="80" />
+        <option name="JNDI_PORT" value="1090" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61854" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="ry-app:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Tomcat Server.jx-app" />
+      <item itemvalue="JUnit.ThreadTest.test (1)" />
+      <item itemvalue="JUnit.ThreadTest.testSynchronousQueueOutOfMixPoolSize" />
+      <item itemvalue="JUnit.ThreadAvailableProcessorsTest.test" />
+      <item itemvalue="JUnit.ThreadDaemonTest.testThreadDemo" />
+      <item itemvalue="Application.ThreadDaemonTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ThreadDaemonTest.testThreadDemo" />
+        <item itemvalue="Application.ThreadDaemonTest" />
+        <item itemvalue="JUnit.ThreadAvailableProcessorsTest.test" />
+        <item itemvalue="JUnit.ThreadTest.testSynchronousQueueOutOfMixPoolSize" />
+        <item itemvalue="JUnit.ThreadTest.test (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\ASUS\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\huangyong\workspace\ry_exchange\ry" />
+          <option name="myCopyRoot" value="D:\huangyong\workspace\ry_exchange\ry" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\huangyong\workspace\ry_exchange\ry" />
+          <option name="myCopyRoot" value="D:\huangyong\workspace\ry_exchange\ry" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5ef7161f-396f-4777-b5ac-07c3d6e4ae18" name="Default Changelist" comment="" />
+      <created>1542803901219</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542803901219</updated>
+      <workItem from="1542803904914" duration="157371000" />
+      <workItem from="1543808183741" duration="313000" />
+      <workItem from="1543808594569" duration="41105000" />
+      <workItem from="1544074147060" duration="586000" />
+      <workItem from="1544075819343" duration="45430000" />
+      <workItem from="1544592891026" duration="8192000" />
+      <workItem from="1544608738229" duration="95165000" />
+      <workItem from="1545010997961" duration="35806000" />
+      <workItem from="1545317773871" duration="20709000" />
+      <workItem from="1545618796204" duration="93749000" />
+      <workItem from="1546073491648" duration="2112000" />
+      <workItem from="1546480881320" duration="4354000" />
+      <workItem from="1546495238348" duration="62103000" />
+      <workItem from="1546911253554" duration="5475000" />
+      <workItem from="1547003100038" duration="4381000" />
+      <workItem from="1547013169904" duration="4886000" />
+    </task>
+    <task id="LOCAL-00091" summary="master">
+      <created>1544697575646</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1544697575646</updated>
+    </task>
+    <task id="LOCAL-00092">
+      <created>1544698644483</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1544698644483</updated>
+    </task>
+    <task id="LOCAL-00093" summary="beta">
+      <created>1544698855544</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1544698855545</updated>
+    </task>
+    <task id="LOCAL-00094" summary="master">
+      <created>1544699649987</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1544699649987</updated>
+    </task>
+    <task id="LOCAL-00095" summary="master">
+      <created>1544699704665</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1544699704665</updated>
+    </task>
+    <task id="LOCAL-00096" summary="db">
+      <created>1544700006645</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1544700006645</updated>
+    </task>
+    <task id="LOCAL-00097" summary="短信开关">
+      <created>1544758459894</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1544758459894</updated>
+    </task>
+    <task id="LOCAL-00098" summary="master">
+      <created>1544758807746</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1544758807746</updated>
+    </task>
+    <task id="LOCAL-00099" summary="test">
+      <created>1544767725052</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1544767725052</updated>
+    </task>
+    <task id="LOCAL-00100" summary="master">
+      <created>1544776344640</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1544776344640</updated>
+    </task>
+    <task id="LOCAL-00101" summary="beta">
+      <created>1544777720063</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1544777720063</updated>
+    </task>
+    <task id="LOCAL-00102" summary="beta">
+      <created>1544778276479</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1544778276479</updated>
+    </task>
+    <task id="LOCAL-00103" summary="master">
+      <created>1544779211700</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1544779211700</updated>
+    </task>
+    <task id="LOCAL-00104" summary="beta">
+      <created>1544780700451</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1544780700451</updated>
+    </task>
+    <task id="LOCAL-00105" summary="master">
+      <created>1544783929722</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1544783929722</updated>
+    </task>
+    <task id="LOCAL-00106" summary="master">
+      <created>1544813230361</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1544813230361</updated>
+    </task>
+    <task id="LOCAL-00107" summary="beta">
+      <created>1544853877584</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1544853877584</updated>
+    </task>
+    <task id="LOCAL-00108" summary="wallet">
+      <created>1544860462363</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1544860462363</updated>
+    </task>
+    <task id="LOCAL-00109" summary="db jdb">
+      <created>1544861073273</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1544861073273</updated>
+    </task>
+    <task id="LOCAL-00110" summary="ffrozen">
+      <created>1544861880813</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1544861880813</updated>
+    </task>
+    <task id="LOCAL-00111" summary="总资产">
+      <created>1544879250043</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1544879250043</updated>
+    </task>
+    <task id="LOCAL-00112" summary="master">
+      <created>1544881061137</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1544881061137</updated>
+    </task>
+    <task id="LOCAL-00113" summary="master">
+      <created>1544883418085</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1544883418086</updated>
+    </task>
+    <task id="LOCAL-00114" summary="beta">
+      <created>1545042229258</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1545042229259</updated>
+    </task>
+    <task id="LOCAL-00115" summary="master">
+      <created>1545042718179</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1545042718179</updated>
+    </task>
+    <task id="LOCAL-00116" summary="beta">
+      <created>1545103060155</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1545103060155</updated>
+    </task>
+    <task id="LOCAL-00117" summary="master">
+      <created>1545123703881</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1545123703881</updated>
+    </task>
+    <task id="LOCAL-00118" summary="不开放华联用户权限">
+      <created>1545212454764</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1545212454764</updated>
+    </task>
+    <task id="LOCAL-00119" summary="startwith">
+      <created>1545213850750</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1545213850750</updated>
+    </task>
+    <task id="LOCAL-00120" summary="index.html">
+      <created>1545214266035</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1545214266035</updated>
+    </task>
+    <task id="LOCAL-00121" summary="后台扣款">
+      <created>1545388685821</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1545388685836</updated>
+    </task>
+    <task id="LOCAL-00122" summary="钱包后台转帐帐单">
+      <created>1545631833809</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1545631833810</updated>
+    </task>
+    <task id="LOCAL-00123" summary="钱包后台转帐帐单">
+      <created>1545632680954</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1545632680954</updated>
+    </task>
+    <task id="LOCAL-00124" summary="提币限制">
+      <created>1545806577187</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1545806577187</updated>
+    </task>
+    <task id="LOCAL-00125" summary="提币限制">
+      <created>1545812245051</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1545812245051</updated>
+    </task>
+    <task id="LOCAL-00126" summary="提币限制">
+      <created>1545813564126</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1545813564126</updated>
+    </task>
+    <task id="LOCAL-00127" summary="加密">
+      <created>1545880710554</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1545880710554</updated>
+    </task>
+    <task id="LOCAL-00128" summary="后台钱包配置">
+      <created>1545961415384</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1545961415384</updated>
+    </task>
+    <task id="LOCAL-00129" summary="加密">
+      <created>1545978995109</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1545978995109</updated>
+    </task>
+    <task id="LOCAL-00130" summary="pic style">
+      <created>1546076713245</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1546076713246</updated>
+    </task>
+    <task id="LOCAL-00131">
+      <created>1546484560934</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1546484560935</updated>
+    </task>
+    <task id="LOCAL-00132">
+      <created>1546502726509</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1546502726509</updated>
+    </task>
+    <task id="LOCAL-00133" summary="RYG modelView">
+      <created>1546507258901</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1546507258901</updated>
+    </task>
+    <task id="LOCAL-00134" summary="解密类">
+      <created>1546512622842</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1546512622842</updated>
+    </task>
+    <task id="LOCAL-00135">
+      <created>1546568562169</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1546568562169</updated>
+    </task>
+    <task id="LOCAL-00136">
+      <created>1546570062564</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1546570062564</updated>
+    </task>
+    <task id="LOCAL-00137">
+      <created>1546571828025</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1546571828025</updated>
+    </task>
+    <task id="LOCAL-00138">
+      <created>1546574040928</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1546574040928</updated>
+    </task>
+    <task id="LOCAL-00139">
+      <created>1546586393778</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1546586393778</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="ThreadTest_testSynchronousQueue - 2019.01.07 at 07h 04m 03s.xml">
+      <configuration name="ThreadTest.testSynchronousQueue" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ThreadTest_test_(1) - 2019.01.07 at 07h 07m 50s.xml">
+      <configuration name="ThreadTest.test (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ThreadTest_test_(1) - 2019.01.07 at 07h 10m 25s.xml">
+      <configuration name="ThreadTest.test (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ThreadTest_test_(1) - 2019.01.07 at 07h 13m 50s.xml">
+      <configuration name="ThreadTest.test (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ThreadTest_testSynchronousQueueOutOfMixPoolSize - 2019.01.07 at 07h 20m 01s.xml">
+      <configuration name="ThreadTest.testSynchronousQueueOutOfMixPoolSize" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ThreadAvailableProcessorsTest_test - 2019.01.07 at 19h 29m 16s.xml">
+      <configuration name="ThreadAvailableProcessorsTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ThreadDaemonTest_testThreadDemo - 2019.01.08 at 05h 37m 15s.xml">
+      <configuration name="ThreadDaemonTest.testThreadDemo" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ThreadDaemonTest_testThreadDemo - 2019.01.08 at 05h 38m 48s.xml">
+      <configuration name="ThreadDaemonTest.testThreadDemo" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ThreadDaemonTest_testThreadDemo - 2019.01.08 at 05h 51m 05s.xml">
+      <configuration name="ThreadDaemonTest.testThreadDemo" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ThreadDaemonTest_testThreadDemo - 2019.01.08 at 05h 51m 22s.xml">
+      <configuration name="ThreadDaemonTest.testThreadDemo" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="581737000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8636364" visible="true" weight="0.26279318" />
+      <window_info id="Structure" order="1" sideWeight="0.13636364" side_tool="true" visible="true" weight="0.26279318" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" sideWeight="0.24414304" side_tool="true" weight="0.26012793" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.54989153" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="5" weight="0.329718" />
+      <window_info anchor="bottom" id="Application Servers" order="6" weight="0.3286334" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.29826465" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.329718" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" visible="true" weight="0.28416485" />
+      <window_info anchor="bottom" id="Debug" order="14" weight="0.3340564" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info active="true" anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.14978679" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.12793177" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.03251599" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="master properties" />
+    <MESSAGE value="master config" />
+    <MESSAGE value="bug fixed" />
+    <MESSAGE value="config master" />
+    <MESSAGE value="jdbc config" />
+    <MESSAGE value="db" />
+    <MESSAGE value="短信开关" />
+    <MESSAGE value="test" />
+    <MESSAGE value="wallet" />
+    <MESSAGE value="db jdb" />
+    <MESSAGE value="ffrozen" />
+    <MESSAGE value="总资产" />
+    <MESSAGE value="beta" />
+    <MESSAGE value="master" />
+    <MESSAGE value="不开放华联用户权限" />
+    <MESSAGE value="startwith" />
+    <MESSAGE value="index.html" />
+    <MESSAGE value="后台扣款" />
+    <MESSAGE value="钱包后台转帐帐单" />
+    <MESSAGE value="提币限制" />
+    <MESSAGE value="后台钱包配置" />
+    <MESSAGE value="加密" />
+    <MESSAGE value="pic style" />
+    <MESSAGE value="RYG modelView" />
+    <MESSAGE value="解密类" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/huagu/vcoin/main/controller/front/FrontWelletController.java</url>
+          <line>311</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/huagu/vcoin/main/controller/front/FrontWelletController.java</url>
+          <line>306</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/huagu/vcoin/main/controller/front/FrontOtcController.java</url>
+          <line>549</line>
+          <properties />
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/coa-erc2.0-1.0.0.jar!/com/huagu/coa/common/tool/TokenClient.class</url>
+          <line>192</line>
+          <properties />
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/vcoin-wallet-1.0.0.jar!/site/jayun/vcoin/wallet/BTCUtils.class</url>
+          <line>441</line>
+          <properties />
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/vcoin-wallet-1.0.0.jar!/site/jayun/vcoin/wallet/ETHUtils.class</url>
+          <line>187</line>
+          <properties />
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/vcoin-wallet-1.0.0.jar!/site/jayun/vcoin/wallet/ETHUtils.class</url>
+          <line>199</line>
+          <properties />
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/vcoin-wallet-1.0.0.jar!/site/jayun/vcoin/wallet/BTCUtils.class</url>
+          <line>113</line>
+          <properties />
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/huagu/vcoin/main/controller/admin/TradeMappingController.java</url>
+          <line>216</line>
+          <properties />
+          <option name="timeStamp" value="135" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/huagu/vcoin/main/controller/admin/VirtualOperationLogController.java</url>
+          <line>131</line>
+          <properties />
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/huagu/vcoin/main/dao/FvirtualoperationlogDAO.java</url>
+          <line>170</line>
+          <properties />
+          <option name="timeStamp" value="137" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/cerc/summer-bean/1.4.1/summer-bean-1.4.1.jar!/cn/cerc/jbean/services/AppSessionRestore.class</url>
+          <line>45</line>
+          <properties />
+          <option name="timeStamp" value="158" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/cerc/summer-bean/1.4.1/summer-bean-1.4.1.jar!/cn/cerc/jbean/services/AppSessionRestore.class</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="159" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/cerc/summer-bean/1.4.1/summer-bean-1.4.1.jar!/cn/cerc/jbean/services/AppSessionRestore.class</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="160" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/cerc/jbean/core/LocalConfig.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="199" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>queryObject.list()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>fvirtualcointype.getMainAddr().length() &gt; 50</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>fvirtualcointype.getMainAddr().substring(26 - 3 -1 ,26 - 3 -1 + 34)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>fvirtualcointype.getMainAddr().substring(26 - 15 -1 ,26 - 15 -1 + 34)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>fvirtualcointype.getMainAddr().substring(26 - 15 ,26 - 15 + 34)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.getParameter(&quot;uid&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>new String(Base64.getDecoder().decode(&quot;ZWt5ME5SNU1INE42ekg6YmM3ZjVhMGUzY2UxZThhYzk5OGJkNGE1OGJkM2JhYjc2YzhjNzRlYQ==&quot;))</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ekey.substring(21 -1 ,21 -1 + 14)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>bkey.substring(4 - 1 ,4 - 1 + 16)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/huagu/vcoin/main/service/admin/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="149" selection-start-line="149" selection-end-line="149" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/huagu/vcoin/main/model/Fscore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="142" column="84" selection-start-line="142" selection-start-column="78" selection-end-line="142" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/huagu/vcoin/main/model/Fuser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="609" selection-start-line="609" selection-end-line="609" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/huagu/vcoin/main/dao/FuserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="315" column="20" selection-start-line="315" selection-start-column="20" selection-end-line="315" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/soul/SoulTestHttpApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/exception/SoulException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/HttpMethodEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/LoadBalanceEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/MatchModeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/OperatorEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/ParamTypeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/PluginEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2150">
+          <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/PluginTypeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/ResultEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/RpcTypeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/SelectorTypeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/SerializeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1250">
+          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/enums/WafEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/exception/CommonErrorCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/exception/SerializerException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/result/SoulResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="107" column="56" lean-forward="true" selection-start-line="107" selection-start-column="56" selection-end-line="107" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/utils/DateUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-401">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/utils/GSONUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2526">
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/utils/JsonUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/utils/LogUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/constant/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="71" column="11" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/utils/SignUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1025">
+          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/utils/SpiLoadFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/utils/UrlUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/utils/UUIDUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/utils/VersionUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/soul/test/http/SoulTestHttpApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.2.RELEASE/spring-web-5.1.2.RELEASE.jar!/org/springframework/http/MediaType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="345" column="21" selection-start-line="345" selection-start-column="21" selection-end-line="345" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/test/java/thread/ThreadTest.java" />
+    <entry file="file://$PROJECT_DIR$/test/src/soul/test/http/controller/HttpTestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/projectreactor/reactor-core/3.2.2.RELEASE/reactor-core-3.2.2.RELEASE.jar!/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="35" column="25" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/jdk1.8.0_65/jre/lib/rt.jar!/java/util/concurrent/Executors.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/EnCodeMasterUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/soul/test/http/router/SoulTestHttpRouter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/projectreactor/reactor-core/3.2.2.RELEASE/reactor-core-3.2.2.RELEASE.jar!/reactor/core/scheduler/Schedulers.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1000">
+          <caret line="69" column="88" selection-start-line="69" selection-start-column="88" selection-end-line="69" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/jdk1.8.0_65/src.zip!/java/util/concurrent/ExecutorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2550">
+          <caret line="136" column="17" selection-start-line="136" selection-start-column="17" selection-end-line="136" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/projectreactor/reactor-core/3.2.2.RELEASE/reactor-core-3.2.2.RELEASE.jar!/reactor/core/scheduler/DelegateServiceScheduler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="30" column="21" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/thread/ThreadAvailableProcessorsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/jdk1.8.0_65/src.zip!/java/util/concurrent/ThreadPoolExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29150">
+          <caret line="1223" column="11" selection-start-line="1223" selection-start-column="11" selection-end-line="1223" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/jdk1.8.0_65/src.zip!/java/util/concurrent/Executors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="493" column="45" lean-forward="true" selection-start-line="493" selection-start-column="45" selection-end-line="493" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/thread/ThreadPoolExecutorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="58" column="41" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/thread/ThreadDaemonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="56" column="33" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/soul/test/http/config/HttpServerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="70" column="49" selection-start-line="70" selection-start-column="49" selection-end-line="70" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/org/dromara/soul/common/utils/ByteBuffUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="15" column="60" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>ry-app:war exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.50229883" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring (ry-app)|Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.50229883" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>ry-app</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>aliyun-java-sdk-core-3.5.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.50229883" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

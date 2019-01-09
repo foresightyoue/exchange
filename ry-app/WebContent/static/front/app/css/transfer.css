@@ -1,0 +1,650 @@
+html, body {
+    font-famliy: "Microsoft YaHei";
+    height: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    font-size: .28rem;
+    -webkit-text-size-adjust: none;
+    background-color: #1F1F21;
+}
+
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+textarea {
+    resize: none;
+}
+
+table {
+    border-collapse: collapse;
+    box-sizing: border-box;
+}
+
+input, button, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    border: 0;
+    background: transparent scroll;
+    outline: 0
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: 400
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #f5f5f5 inset;
+}
+
+button:focus, input:focus, select:focus, textarea:focus {
+    outline: 0;
+    -webkit-tap-highlight-color: transparent
+}
+
+select, input {
+    vertical-align: center;
+}
+
+em, i {
+    font-style: normal;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+}
+
+.transferCommentPager:before {
+    content: '';
+    display: table;
+}
+
+.transferCommentPager:after {
+    content: '';
+    diplay: block;
+    clear: both;
+}
+
+.transferCommentPager {
+    background-color: #1F1F21;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.trnasferheaderPosition {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.transferCommentHeader {
+    height: 60px;
+    line-height: 60px;
+    overflow: hidden;
+    border-bottom: 1px solid #111213;
+    margin-bottom: 10px;
+    color: #CA9742;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #1F1F21;
+    display: none;
+}
+
+.transferCommentHeader>a:first-child {
+    position: absolute;
+    left: 10px;
+    top: 14px;
+}
+
+.transferCommentHeader>a:first-child img {
+    max-width: 80%;
+}
+
+.transferCommentHeader>a:last-child {
+    position: absolute;
+    right: 10px;
+    color: #CA9742;
+    top: 0;
+}
+
+.transferCommentHeader>h1 {
+    text-align: center;
+    font-weight: normal;
+    font-size: .32rem;
+}
+/* .trnasuserContent{
+	padding-top:70px;
+} */
+.transUserTop {
+    color: #C0C0BF;
+    font-size: .28rem;
+    padding-left: .2rem;
+    padding-right: .2rem;
+    border-top: 1px solid #2D2D2F;
+    border-bottom: 1px solid #2D2D2F;
+    ovrflow: hidden;
+    position: relative;
+    background: #262628;
+    margin-top: .2rem;
+    height: .75rem;
+    line-height: .75rem;
+    box-sizing: border-box;
+}
+
+.transUserTop>span {
+    display: block;
+    height: .75rem;
+    line-height: .75rem;
+    box-sizing: border-box;
+}
+
+.transUserTop p.img {
+    position: absolute;
+    width: .75rem;
+    height: .75rem;
+    top: 0;
+    right: .2rem;
+    background-image: url('/img/next.png');
+    background-repeat: no-repeat;
+    background-size: 30% 50%;
+    background-position: center center;
+}
+
+.UserslatestT {
+    margin-top: .25rem;
+    margin-bottom: .2rem;
+    color: #777877;
+    padding-left: .2rem;
+}
+
+.UserLatesList:before, .UserLatesItem:before, .transferReordContent:before {
+    content: '';
+    display: table;
+}
+
+.UserLatesList:after, .UserLatesItem:after, .transferReordContent:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+/* .transferReordContent{
+	padding-top:70px;
+} */
+.UserLatesList .UserLatesItem:last-child {
+    border-bottom: 1px solid #2D2D2F
+}
+
+.UserLatesItem {
+    background: #262628;
+    padding: .2rem;
+    border-top: 1px solid #2D2D2F;
+    margin-bottom: .2rem;
+}
+
+.UserLatesItem img {
+    width: .7rem;
+    height: .7rem;
+    border-radius: 100%;
+    float: left;
+}
+
+.UserLatesItem>div {
+    float: left;
+    margin-left: .25rem;
+}
+
+.UserLatesItem h3 {
+    font-weight: normal;
+    color: #C0C0BF;
+    font-size: .28rem;
+}
+
+.UserLatesItem p {
+    color: #777877;
+    font-size: .24rem;
+    padding-top: .1rem;
+}
+
+.transerReordList {
+    width: 100%;
+}
+
+.transerReordList tr {
+    background-color: #262628;
+    border: 1px solid #2D2D2F;
+    text-align: left;
+}
+
+.transerReordList tr th {
+    background: #1F1F21;
+    color: #A27C3B;
+    padding: 10px;
+    font-weight: normal;
+}
+
+.transerReordList tr:first-child {
+    border-top: 0;
+}
+
+.transerReordList tr td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #262628;
+}
+
+.transerReordList tr td:first-child {
+    padding-left: 10px;
+    width: 23%;
+    color: #858586;
+    font-size: .24rem;
+}
+
+.transerReordList tr td:nth-child(2) {
+    width: 20%;
+}
+
+.transerReordList tr td:last-child h3 {
+    font-weight: normal;
+    color: #C3C3C3;
+}
+
+.transerReordList tr td:last-child p {
+    color: #858586;
+    font-size: .24rem;
+}
+
+.transerReordList img {
+    width: 54px;
+    height: 54px;
+    border-radius: 100%;
+}
+/* .transferContentPosition{
+	padding-top:70px;
+} */
+.transferChooseContent {
+    width: 100%;
+}
+
+.transferChooseContent>li {
+    position: relative;
+    width: 100%;
+    background-color: #262628;
+    border-top: 1px solid #313133;
+    height: .75rem;
+    line-height: .75rem;
+}
+
+.transferChooseContent>li a {
+    position: absolute;
+    height: .75rem;
+    color: #BF9342;
+    font-size: .28rem;
+    right: .2rem;
+    top: 0;
+}
+
+.transferChooseContent>li input {
+    width: 100%;
+    padding: .2rem .2rem;
+    outline: none;
+    border: 0;
+    opacity: .5;
+    color: #DCDCDE;
+    font-size: .28rem;
+    background-color: #262628;
+    box-sizing: border-box;
+}
+
+.transferSubmitBtn {
+    outline: none;
+    border: 0;
+    border-radius: .1rem;
+    width: 95%;
+    height: .88rem;
+    line-height: .88rem;
+    display: block;
+    color: #fff;
+    font-size: .28rem;
+    margin: 0 auto;
+    background-color: #BA8C3E;
+    margin-top: 100px;
+}
+/*chooseFriendPager  */
+.transferCommentHeader>input {
+    position: absolute;
+    right: 10px;
+    color: #CA9742;
+    outline: none;
+    border: 0;
+    background: transparent;
+    top: 19px;
+    font-size: .32rem;
+}
+
+.transChoFriConList {
+    width: 100%;
+    padding-bottom: .3rem;
+}
+
+.transChoFriConList tr {
+    border-top: 1px solid #343436;
+}
+
+.transChoFriConList tr:last-child {
+    border-bottom: 1px solid #343436;
+}
+
+.transChoFriConList tr td:first-child {
+    padding-left: 10px;
+    width: 23%;
+}
+
+.transChoFriConList tr td:nth-child(2) {
+    width: 25%;
+    color: #D4D4D4;
+    font-size: .28rem;
+}
+
+.transChoFriConList tr td:last-child {
+    padding-right: 10px;
+    width: 50%;
+    text-align: right;
+}
+
+.transChoFriConList tr td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.transChoFriConList tr td img {
+    width: 54px;
+    height: 54px;
+    border-radius: 100%;
+}
+/*  
+radio style
+*/
+.radio-btn input[type="radio"] {
+    visibility: hidden;
+}
+
+.radio-btn {
+    width: .25rem;
+    height: .25rem;
+    display: inline-block;
+    margin: 0 .2rem 0 0;
+    cursor: pointer;
+    position: relative;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.radio-btn i {
+    position: absolute;
+    width: .25rem;
+    height: .25rem;
+    left: 0rem;
+    top: 0rem;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 1px solid #fff;
+}
+
+.checkedRadio i {
+    background-image: url(/img/radiopic.png);
+    background-color: #BA8C3E;
+    background-repeat: no-repeat;
+    background-size: 80% 80%;
+    background-position: center center;
+    border: 1px solid #BA8C3E;
+}
+/*transferMoneypager  */
+.transferMoneyTop {
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    background-color: #262628;
+}
+
+.transferMoneyTop img {
+    display: block;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 100%;
+    margin: 0 auto;
+}
+
+.transferMoneyTop h3 {
+    text-align: center;
+    margin-top: .2rem;
+    color: #BB8E3F;
+    font-weight: normal;
+}
+
+.transferMoneyContent {
+    width: 100%;
+    margin-top: .25rem;
+}
+
+.transferMoneyContent tr {
+    border-top: 1px solid #343436;
+    background-color: #262628;
+    height: .75rem;
+    line-height: .75rem;
+}
+
+.transferMoneyContent tr:last-child {
+    border-bottom: 1px solid #343436;
+}
+
+.transferMoneyContent tr td:first-child {
+    padding-left: .2rem;
+    text-align: left;
+    color: #CACAC8;
+}
+
+.transferMoneyContent tr td:last-child {
+    padding-right: .2rem;
+    text-align: right;
+}
+
+.transferMoneyContent tr td:last-child select {
+    color: #CA9742;
+    outline: none;
+    border: 0;
+    background: transparent;
+    font-size: .28rem;
+}
+
+.transferMoneyContent tr td input {
+    font-size: .28rem;
+    text-align: right;
+    opacity: .5;
+    color: #DCDCDE;
+    outline: none;
+    border: 0;
+    background: transparent;
+    padding-right: .3rem;
+}
+
+.transferMonerfooter {
+    padding-top: .2rem;
+    padding-right: .2rem;
+    text-align: right;
+    font-size: .24rem;
+    color: #666665;
+}
+
+.transferMonerfooter>span {
+    color: #BB8E3F;
+}
+/*transferConfrimPager */
+.transferConfirmContent {
+    margin-top: -10px;
+}
+
+.transferConfirmTop {
+    text-align: center;
+    color: #BA8C3E;
+    padding-top: .88rem;
+    padding-bottom: .7rem;
+    background-color: #262628;
+}
+
+.transferConfirmTop>p {
+    font-size: .32rem;
+}
+
+.transferConfirmTop>p span {
+    font-size: .28rem;
+    padding-left: .1rem;
+}
+
+.transferConfirmList, .transferConfirmList2 {
+    width: 100%;
+    background-color: #262628;
+    margin-top: 10px;
+    color: #BBBBBB;
+}
+
+.transferConfirmList tr, .transferConfirmList2 tr {
+    border-top: 1px solid #2E2E30;
+}
+
+.transferConfirmList tr:last-child, .transferConfirmList2 tr:last-child {
+    border-bottom: 1px solid #2E2E30;
+}
+
+.transferConfirmList tr td, .transferConfirmList2 tr td input {
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+}
+
+.transferConfirmList tr td:first-child {
+    padding-left: .2rem;
+}
+
+.transferConfirmList tr td:last-child {
+    padding-right: .2rem;
+    color: #8E8E8D;
+    text-align: right;
+    font-size: .24rem;
+}
+
+.transferConfirmList2 tr td {
+    position: relative;
+    padding-left: .2rem;
+    padding-right: .2rem;
+}
+
+.transferConfirmList2 tr td input {
+    opacity: .5;
+    color: #DCDCDE;
+}
+
+.transferConfirmList2 tr input, .transferConfirmList2 tr button {
+    outline: none;
+    border: 0;
+    padding: 10px 5px;
+    background: transparent;
+    color: #D5D5D5;
+}
+
+.transferConfirmList2 tr button {
+    position: absolute;
+    right: .2rem;
+    top: 0px;
+    padding: 9px 0;
+    color: #BA8C3E;
+    font-size: .28rem;
+}
+
+.transferDeatailHeader {
+    position: fixed;
+    display: none;
+}
+/* .transferDetailContent{
+	padding-top:60px;
+} */
+.transferDetailTitle {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    text-align: center;
+    background-color: #262628;
+    margin-bottom: 10px;
+}
+
+.transferDetailTitle>p {
+    font-size: .32rem;
+    text-align: cneter;
+    color: #CA9742;
+}
+
+.transferDetailTitle>p>span {
+    font-size: .28rem;
+}
+
+.transferDetailList {
+    width: 100%;
+    background-color: #262628;
+    font-size: .24rem;
+}
+
+.transferDetailList tr {
+    border-top: 1px solid #323234;
+}
+
+.transferDetailList tr td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.transferDetailList tr:last-child {
+    border-bottom: 1px solid #323234;
+}
+
+.transferDetailList tr td:first-child {
+    padding-left: 10px;
+    color: #919190;
+    width: 26%;
+}
+
+.transferDetailList tr td:last-child {
+    padding-right: 10px;
+    color: #C5C5C5;
+}
+
+.transferDetailList tr td img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}

@@ -1,0 +1,3628 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="database.xsl"?>
+<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="database.xsd">
+    <caption>虚拟币交易所数据库结构</caption>
+    <home></home>
+    <tables>
+        <table code="emailvalidate">
+            <name>服务调用记录表</name>
+            <remark />
+            <fields>
+                <field code="UID_" type="int(11)" null="false">
+                    <name>主键UID</name>
+                </field>
+                <field code="CorpNo_" type="varchar(10)" null="false">
+                    <name></name>
+                </field>
+                <field code="Service_" type="varchar(80)" null="false">
+                    <name>执行服务</name>
+                </field>
+                <field code="Trans_" type="bit(1)" null="false">
+                    <name>Trans_</name>
+                </field>
+                <field code="TickCount_" type="decimal(18,6)" null="false">
+                    <name>执行毫秒时间</name>
+                </field>
+                <field code="AppUser_" type="varchar(10)" null="false">
+                    <name>建档人员</name>
+                </field>
+                <field code="AppDate_" type="datetime(19)" null="true">
+                    <name>建档日期</name>
+                </field>
+                <field code="Client_" type="bit(1)" null="false">
+                    <name>是否客户端调用</name>
+                </field>
+                <field code="DataIn_" type="mediumtext(16777215)" null="true">
+                    <name>传入参数</name>
+                </field>
+            </fields>
+        </table>
+        <table code="emailvalidate">
+            <name>邮箱验证链接</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name>主键Id</name>
+                </field>
+                <field code="fUuid" type="varchar(128)" null="false">
+                    <name>发送邮件编号</name>
+                </field>
+                <field code="FUs_fId" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="fCreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fValidateTime" type="datetime(19)" null="true">
+                    <name>验证时间</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name>版本</name>
+                </field>
+                <field code="type" type="int(11)" null="true">
+                    <name>邮件类别</name>
+                </field>
+                <field code="fmail" type="varchar(128)" null="true">
+                    <name>邮件地址</name>
+                </field>
+                <field code="fNewUUid" type="varchar(128)" null="true">
+                    <name>新的发送邮件编号</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fabout">
+            <name>关于系统</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name>主键fId</name>
+                </field>
+                <field code="ftitle" type="varchar(128)" null="true">
+                    <name>标题-中文</name>
+                </field>
+                <field code="ftitle_en" type="varchar(128)" null="true">
+                    <name>标题-英文</name>
+                </field>
+                <field code="ftitle_in" type="varchar(128)" null="true">
+                    <name>标题-印度文</name>
+                </field>
+                <field code="fcontent" type="mediumtext(16777215)" null="true">
+                    <name>内容-中文</name>
+                </field>
+                <field code="fcontent_en" type="mediumtext(16777215)" null="true">
+                    <name>内容-英文</name>
+                </field>
+                <field code="fcontent_in" type="mediumtext(16777215)" null="true">
+                    <name>内容-印度文</name>
+                </field>
+                <field code="ftype" type="varchar(100)" null="true">
+                    <name>帮助类型-中文</name>
+                </field>
+                <field code="ftype_en" type="varchar(100)" null="true">
+                    <name>帮助类型-英文</name>
+                </field>
+                <field code="ftype_in" type="varchar(100)" null="true">
+                    <name>帮助类型-印度文</name>
+                </field>
+                <field code="fisview" type="tinyint(4)" null="true">
+                    <name>是否可见</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fadmin">
+            <name>管理员列表</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name>主键fId</name>
+                </field>
+                <field code="fName" type="varchar(32)" null="true">
+                    <name>登录名</name>
+                </field>
+                <field code="fPassword" type="varchar(32)" null="true">
+                    <name>密码</name>
+                </field>
+                <field code="fCreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fLevel" type="int(11)" null="true">
+                    <name>等级</name>
+                </field>
+                <field code="fStatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name>版本</name>
+                </field>
+                <field code="froleId" type="int(11)" null="true">
+                    <name>frole.fid</name>
+                </field>
+                <field code="salt" type="varchar(50)" null="true">
+                    <name>salt</name>
+                </field>
+                <field code="fuserid" type="int(11)" null="true">
+                    <name>fuserid</name>
+                </field>
+                <field code="fregPass" type="varchar(50)" null="true">
+                    <name>fregPass</name>
+                </field>
+                <field code="fwidPass" type="varchar(50)" null="true">
+                    <name>fwidPass</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fads">
+            <name>广告列表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="ftitle" type="varchar(100)" null="true">
+                    <name>中文标题</name>
+                </field>
+                <field code="ftitle_en" type="varchar(100)" null="true">
+                    <name>英文标题</name>
+                </field>
+                <field code="fimages" type="varchar(100)" null="true">
+                    <name>图片地址</name>
+                </field>
+                <field code="fcreatetime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="furl" type="varchar(100)" null="true">
+                    <name>跳转链接</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fapi">
+            <name>第三方服务连接参数表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fpartner" type="varchar(128)" null="true">
+                    <name>合作伙伴</name>
+                </field>
+                <field code="fsecret" type="varchar(256)" null="true">
+                    <name>链接</name>
+                </field>
+                <field code="fuser" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="label" type="varchar(128)" null="true">
+                    <name>相关信息</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fappversion">
+            <name>App版本信息表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="type" type="int(11)" null="false">
+                    <name>app类别（0安卓 1苹果）</name>
+                </field>
+                <field code="update_readme" type="varchar(255)" null="true">
+                    <name>版本更新日志</name>
+                </field>
+                <field code="version" type="varchar(32)" null="false">
+                    <name>版本号</name>
+                </field>
+                <field code="update_reset" type="tinyint(1)" null="true">
+                    <name>是否强制更新</name>
+                </field>
+                <field code="url" type="varchar(255)" null="true">
+                    <name>app地址</name>
+                </field>
+                <field code="create_time" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="update_time" type="datetime(19)" null="true">
+                    <name>修改时间</name>
+                </field>
+            </fields>
+        </table>
+        <table code="farticle">
+            <name>资讯列表</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name>id</name>
+                </field>
+                <field code="fCreateAdmin" type="int(11)" null="true">
+                    <name>fadmin.fId</name>
+                </field>
+                <field code="fModifyAdmin" type="int(11)" null="true">
+                    <name>fadmin.fId</name>
+                </field>
+                <field code="fArticleType" type="int(11)" null="true">
+                    <name>farticletype.fId</name>
+                </field>
+                <field code="fTitle" type="varchar(1024)" null="true">
+                    <name>标题</name>
+                </field>
+                <field code="fTitle_en" type="varchar(1024)" null="true">
+                    <name>英文标题</name>
+                </field>
+                <field code="fTitle_in" type="varchar(1024)" null="true">
+                    <name>印度文标题</name>
+                </field>
+                <field code="fTitleEn" type="varchar(1024)" null="true">
+                    <name>英文标题</name>
+                </field>
+                <field code="fKeyword" type="varchar(1024)" null="true">
+                    <name>关键字</name>
+                </field>
+                <field code="fKeyword_en" type="varchar(1024)" null="true">
+                    <name>英文关键字</name>
+                </field>
+                <field code="fKeyword_in" type="varchar(1024)" null="true">
+                    <name>印度文关键字</name>
+                </field>
+                <field code="fDescription" type="varchar(1024)" null="true">
+                    <name>描述</name>
+                </field>
+                <field code="fDescription_en" type="varchar(1024)" null="true">
+                    <name>英文描述</name>
+                </field>
+                <field code="fDescription_in" type="varchar(1024)" null="true">
+                    <name>印度文描述</name>
+                </field>
+                <field code="fContent" type="text(65535)" null="true">
+                    <name>内容</name>
+                </field>
+                <field code="fContent_en" type="text(65535)" null="true">
+                    <name>英文内容</name>
+                </field>
+                <field code="fContent_in" type="text(65535)" null="true">
+                    <name>印度文内容</name>
+                </field>
+                <field code="fContentEn" type="text(65535)" null="true">
+                    <name>英文内容</name>
+                </field>
+                <field code="fCreateDate" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fLastModifyDate" type="datetime(19)" null="true">
+                    <name>修改时间</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name>版本</name>
+                </field>
+                <field code="furl" type="varchar(200)" null="true">
+                    <name>链接</name>
+                </field>
+                <field code="fcount" type="int(11)" null="true">
+                    <name>数量</name>
+                </field>
+                <field code="fisout" type="tinyint(4)" null="true">
+                    <name>是否跳转</name>
+                </field>
+                <field code="foutUrl" type="varchar(200)" null="true">
+                    <name>跳转链接</name>
+                </field>
+                <field code="fisding" type="tinyint(4)" null="true">
+                    <name>是否提示</name>
+                </field>
+            </fields>
+        </table>
+        <table code="farticletype">
+            <name>资讯类型表</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fName" type="varchar(128)" null="true">
+                    <name>资讯类型名称</name>
+                </field>
+                <field code="fName_en" type="varchar(128)" null="true">
+                    <name>英文名</name>
+                </field>
+                <field code="fName_in" type="varchar(128)" null="true">
+                    <name>印度文名称</name>
+                </field>
+                <field code="fKeywords" type="varchar(1024)" null="true">
+                    <name>关键字</name>
+                </field>
+                <field code="fKeywords_en" type="varchar(1024)" null="true">
+                    <name>英文关键字</name>
+                </field>
+                <field code="fKeywords_in" type="varchar(1024)" null="true">
+                    <name>印度文关键字</name>
+                </field>
+                <field code="fDescription" type="varchar(1024)" null="true">
+                    <name>描述</name>
+                </field>
+                <field code="fDescription_en" type="varchar(1024)" null="true">
+                    <name>英文描述</name>
+                </field>
+                <field code="fDescription_in" type="varchar(1024)" null="true">
+                    <name>印度文描述</name>
+                </field>
+                <field code="fLastCreateDate" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fLastModifyDate" type="datetime(19)" null="true">
+                    <name>修改时间</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name>版本</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fasset">
+            <name>虚拟资产总表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fuser" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="ftotal" type="decimal(16,6)" null="true">
+                    <name>总资产</name>
+                </field>
+                <field code="detail" type="text(65535)" null="true">
+                    <name>详情</name>
+                </field>
+                <field code="fcreatetime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="flastupdatetime" type="datetime(19)" null="true">
+                    <name>修改时间</name>
+                </field>
+                <field code="status" type="tinyint(1)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name>版本</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fautotrade">
+            <name>自动交易设置</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fuserid" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="ftype" type="int(11)" null="true">
+                    <name>交易类别</name>
+                </field>
+                <field code="fminqty" type="decimal(28,8)" null="true">
+                    <name>最小交易数量</name>
+                </field>
+                <field code="fminprice" type="decimal(28,8)" null="true">
+                    <name>最小浮动价格</name>
+                </field>
+                <field code="fcreatetime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fstatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="fVi_fId" type="int(11)" null="true">
+                    <name>ftrademapping.fid</name>
+                </field>
+                <field code="fmaxqty" type="decimal(28,8)" null="true">
+                    <name>最大交易数量</name>
+                </field>
+                <field code="fmaxprice" type="decimal(28,8)" null="true">
+                    <name>最大浮动价格</name>
+                </field>
+                <field code="fsynType" type="int(11)" null="true">
+                    <name>取价类型</name>
+                </field>
+                <field code="ftimes" type="int(11)" null="true">
+                    <name>多少分钟一次</name>
+                </field>
+                <field code="fstoptimes" type="int(11)" null="true">
+                    <name>开始前随机停几秒</name>
+                </field>
+                <field code="ftradeTime" type="varchar(50)" null="true">
+                    <name>交易时间</name>
+                </field>
+                <field code="fstandardprice" type="decimal(28,8)" null="true">
+                    <name>标准成交价格</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fbalance">
+            <name>损益设置</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="ftitle" type="varchar(1000)" null="true">
+                    <name>标题</name>
+                </field>
+                <field code="fcreatetime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fminqty" type="decimal(20,8)" null="true">
+                    <name>最小数量</name>
+                </field>
+                <field code="fmaxqty" type="decimal(20,8)" null="true">
+                    <name>最大数量</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fbalanceearning">
+            <name>交易损益</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fuserid" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="fqty" type="decimal(16,6)" null="true">
+                    <name>数量</name>
+                </field>
+                <field code="fcreatetime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fstatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name>版本</name>
+                </field>
+                <field code="fvid" type="int(11)" null="true">
+                    <name>fvid</name>
+                </field>
+                <field code="frecType" type="int(11)" null="true">
+                    <name>收益类型</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fbalanceflow">
+            <name>损益流程</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fuserid" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="ftype" type="int(11)" null="true">
+                    <name>类别</name>
+                </field>
+                <field code="fqty" type="decimal(16,6)" null="true">
+                    <name>数量</name>
+                </field>
+                <field code="fcreatetime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fvid" type="int(11)" null="true">
+                    <name>fvirtualcointype.fid</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name>版本</name>
+                </field>
+                <field code="fflowtype" type="int(11)" null="true">
+                    <name>类别</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fbalancelog">
+            <name>损益日志</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fuserid" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="famount" type="decimal(16,6)" null="true">
+                    <name>存入数量</name>
+                </field>
+                <field code="fincomeAmount1" type="decimal(16,6)" null="true">
+                    <name>预计收益数量</name>
+                </field>
+                <field code="fincomeAmount2" type="decimal(16,6)" null="true">
+                    <name>实际收益数量</name>
+                </field>
+                <field code="fstatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="ftype" type="varchar(100)" null="true">
+                    <name>定存类型</name>
+                </field>
+                <field code="frate" type="decimal(16,6)" null="true">
+                    <name>定存利率</name>
+                </field>
+                <field code="fcreatetime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="feffecttime" type="date(10)" null="true">
+                    <name>生效时间</name>
+                </field>
+                <field code="fvid" type="int(11)" null="true">
+                    <name>fvirtualcointype.fId</name>
+                </field>
+                <field code="fday" type="int(11)" null="true">
+                    <name>定存天数</name>
+                </field>
+                <field code="fendtime" type="date(10)" null="true">
+                    <name>结束时间</name>
+                </field>
+                <field code="fcase" type="int(11)" null="true">
+                    <name>案例</name>
+                </field>
+                <field code="fisReturnAmt" type="tinyint(4)" null="true">
+                    <name>是否收益</name>
+                </field>
+                <field code="frecType" type="int(11)" null="true">
+                    <name>收益类型</name>
+                </field>
+                <field code="ftype_en" type="varchar(100)" null="true">
+                    <name>收益类型名称</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fbalancetype">
+            <name>损益类型</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fname" type="varchar(50)" null="true">
+                    <name>类型名称</name>
+                </field>
+                <field code="frate" type="decimal(16,6)" null="true">
+                    <name>定存利率</name>
+                </field>
+                <field code="fcreatetime" type="datetime(19)" null="true">
+                    <name></name>
+                </field>
+                <field code="fday" type="int(11)" null="true">
+                    <name>定存周期</name>
+                </field>
+                <field code="fvid" type="int(11)" null="true">
+                    <name>fvirtualcointype.fId</name>
+                </field>
+                <field code="frecType" type="int(11)" null="true">
+                    <name>收益类型</name>
+                </field>
+                <field code="fname_en" type="varchar(50)" null="true">
+                    <name>收益类型名称</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fbankin">
+            <name>充值银行列表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="uid" type="int(11)" null="true">
+                    <name>uid</name>
+                </field>
+                <field code="rmb" type="decimal(16,6)" null="true">
+                    <name>金额</name>
+                </field>
+                <field code="bankname" type="varchar(200)" null="true">
+                    <name>银行名称</name>
+                </field>
+                <field code="tday" type="datetime(19)" null="true">
+                    <name>时间</name>
+                </field>
+                <field code="ok" type="int(11)" null="true">
+                    <name></name>
+                </field>
+            </fields>
+        </table>
+        <table code="fbankinfo">
+            <name>银行资料表</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="FUs_fId" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="fName" type="varchar(128)" null="true">
+                    <name>银行名称</name>
+                </field>
+                <field code="fBankNumber" type="varchar(128)" null="true">
+                    <name>银行卡号</name>
+                </field>
+                <field code="fBankType" type="int(11)" null="true">
+                    <name>银行类别</name>
+                </field>
+                <field code="fCreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fStatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+            </fields>
+        </table>
+        <table code="fbankinfo_withdraw">
+            <name>提现银行列表</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="FUs_fId" type="int(11)" null="true">
+                    <name>FUs_fId</name>
+                </field>
+                <field code="fName" type="varchar(128)" null="true">
+                    <name>银行名称</name>
+                </field>
+                <field code="fBankNumber" type="varchar(128)" null="true">
+                    <name>银行卡号</name>
+                </field>
+                <field code="fBankType" type="int(11)" null="true">
+                    <name>银行类别</name>
+                </field>
+                <field code="fCreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fStatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="faddress" type="varchar(100)" null="true">
+                    <name>地址</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fcode" type="varchar(300)" null="true">
+                    <name></name>
+                </field>
+                <field code="fremark" type="varchar(255)" null="true">
+                    <name>备注</name>
+                </field>
+                <field code="fbankIBAN" type="varchar(255)" null="true">
+                    <name>国际银行帐户号码</name>
+                </field>
+                <field code="fothers" type="varchar(300)" null="true">
+                    <name>其余信息</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fcapitaloperation">
+            <name>资金记录表</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="Sys_fId" type="int(11)" null="true">
+                    <name>systembankinfo.fId</name>
+                </field>
+                <field code="FUs_fId" type="int(11)" null="true">
+                    <name>fadmin.fId</name>
+                </field>
+                <field code="fCreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fAmount" type="decimal(16,6)" null="true">
+                    <name>交易金额</name>
+                </field>
+                <field code="fType" type="int(11)" null="true">
+                    <name>交易类别</name>
+                </field>
+                <field code="fStatus" type="int(11)" null="true">
+                    <name>交易状态</name>
+                </field>
+                <field code="fRemittanceType" type="varchar(50)" null="true">
+                    <name>交易方式</name>
+                </field>
+                <field code="fRemark" type="varchar(256)" null="true">
+                    <name>备注</name>
+                </field>
+                <field code="fBank" type="varchar(256)" null="true">
+                    <name>汇款银行</name>
+                </field>
+                <field code="fAccount" type="varchar(256)" null="true">
+                    <name>汇款人帐号</name>
+                </field>
+                <field code="fPayee" type="varchar(256)" null="true">
+                    <name>姓名</name>
+                </field>
+                <field code="fPhone" type="varchar(256)" null="true">
+                    <name>汇款人手机</name>
+                </field>
+                <field code="fLastUpdateTime" type="datetime(19)" null="true">
+                    <name>修改时间</name>
+                </field>
+                <field code="fAuditee_id" type="int(11)" null="true">
+                    <name>审核表fid</name>
+                </field>
+                <field code="ffees" type="decimal(16,6)" null="true">
+                    <name>手续费</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fischarge" type="tinyint(4)" null="true">
+                    <name>是否充值</name>
+                </field>
+                <field code="faddress" type="varchar(200)" null="true">
+                    <name>地址</name>
+                </field>
+                <field code="fcode" type="varchar(255)" null="true">
+                    <name>账号</name>
+                </field>
+                <field code="fbankIBAN" type="varchar(255)" null="true">
+                    <name>银行</name>
+                </field>
+                <field code="fisCheck" type="tinyint(4)" null="true">
+                    <name>是否检测</name>
+                </field>
+                <field code="fone" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+                <field code="ftwo" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+                <field code="fthree" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+                <field code="fCnyAmount" type="decimal(16,6)" null="true">
+                    <name>CNY金额</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fcoinvote">
+            <name>新币投票</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fcn_name" type="varchar(256)" null="true">
+                    <name>中文名</name>
+                </field>
+                <field code="fen_name" type="varchar(256)" null="true">
+                    <name>英文名</name>
+                </field>
+                <field code="fshort_name" type="varchar(256)" null="true">
+                    <name>简称</name>
+                </field>
+                <field code="fdesc" type="mediumtext(16777215)" null="true">
+                    <name>描述</name>
+                </field>
+                <field code="furl" type="varchar(200)" null="true">
+                    <name>路径</name>
+                </field>
+                <field code="fstatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fyes" type="int(11)" null="true">
+                    <name>是</name>
+                </field>
+                <field code="fno" type="int(11)" null="true">
+                    <name>否</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fcoinvotelog">
+            <name>投票记录</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fuser" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="fcreatetime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fcoinvote" type="int(11)" null="true">
+                    <name>fcoinvote.fid</name>
+                </field>
+                <field code="vote" type="int(11)" null="true">
+                    <name>新币投票管理</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fcountlimit">
+            <name>重试登录错误次数之类的用</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fIp" type="varchar(64)" null="true">
+                    <name>ip地址</name>
+                </field>
+                <field code="fCreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fCount" type="int(11)" null="true">
+                    <name>错误次数</name>
+                </field>
+                <field code="fType" type="int(11)" null="true">
+                    <name>类别</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+            </fields>
+        </table>
+        <table code="fctcorder">
+            <name>ctc交易订单表</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fOrderNum" type="varchar(30)" null="false">
+                    <name>订单号</name>
+                </field>
+                <field code="fCreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fCreateUser" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="fType" type="int(11)" null="true">
+                    <name>类别(0买 1卖)</name>
+                </field>
+                <field code="fCoinType" type="int(11)" null="true">
+                    <name>交易币种fId</name>
+                </field>
+                <field code="fSellerId" type="int(11)" null="true">
+                    <name>卖方fId</name>
+                </field>
+                <field code="fBuyerId" type="int(11)" null="true">
+                    <name>买方fId</name>
+                </field>
+                <field code="fPrice" type="decimal(28,8)" null="true">
+                    <name>单价</name>
+                </field>
+                <field code="fNum" type="decimal(28,8)" null="true">
+                    <name>数量</name>
+                </field>
+                <field code="fCnyTotal" type="decimal(28,8)" null="true">
+                    <name>人民币金额</name>
+                </field>
+                <field code="fConfirmTime" type="datetime(19)" null="true">
+                    <name>确认订单时间</name>
+                </field>
+                <field code="fStatus" type="int(11)" null="true">
+                    <name>0待派单 1待确认 2已确认</name>
+                </field>
+                <field code="fUpdateUser" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fentrust">
+            <name>委托交易表</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="FUs_fId" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="ftrademapping" type="int(11)" null="true">
+                    <name>ftrademapping.fid</name>
+                </field>
+                <field code="fCreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fEntrustType" type="int(11)" null="true">
+                    <name>交易类型</name>
+                </field>
+                <field code="fPrize" type="decimal(28,8)" null="true">
+                    <name>单价</name>
+                </field>
+                <field code="fAmount" type="decimal(28,8)" null="true">
+                    <name>总金额</name>
+                </field>
+                <field code="fsuccessAmount" type="decimal(28,8)" null="true">
+                    <name>成交总金额</name>
+                </field>
+                <field code="fCount" type="decimal(28,8)" null="true">
+                    <name>数量</name>
+                </field>
+                <field code="fleftCount" type="decimal(28,8)" null="true">
+                    <name>未成交数量</name>
+                </field>
+                <field code="fStatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="flastUpdatTime" type="datetime(19)" null="true">
+                    <name>修改时间</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fisLimit" type="tinyint(1)" null="true">
+                    <name></name>
+                </field>
+                <field code="ffees" type="decimal(28,8)" null="true">
+                    <name>未成交费率</name>
+                </field>
+                <field code="fleftfees" type="decimal(28,8)" null="true">
+                    <name>已成交费率</name>
+                </field>
+                <field code="fhasSubscription" type="tinyint(4)" null="true">
+                    <name>是否有提交描述</name>
+                </field>
+                <field code="fissend" type="tinyint(4)" null="true">
+                    <name>是否发送</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fentrust_copy">
+            <name>挂单交易表</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="FUs_fId" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="ftrademapping" type="int(11)" null="true">
+                    <name>ftrademapping.fid</name>
+                </field>
+                <field code="fCreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fEntrustType" type="int(11)" null="true">
+                    <name>交易类型(0-买入 1-卖出)</name>
+                </field>
+                <field code="fPrize" type="decimal(28,8)" null="true">
+                    <name>挂单价格</name>
+                </field>
+                <field code="fAmount" type="decimal(28,8)" null="true">
+                    <name>总金额</name>
+                </field>
+                <field code="fsuccessAmount" type="decimal(28,8)" null="true">
+                    <name>成交总金额</name>
+                </field>
+                <field code="fCount" type="decimal(28,8)" null="true">
+                    <name>数量</name>
+                </field>
+                <field code="fleftCount" type="decimal(28,8)" null="true">
+                    <name>每次撮合的数量</name>
+                </field>
+                <field code="fStatus" type="int(11)" null="true">
+                    <name>交易状态 1-未成交 2-部分成交 3-完全成交 4-撤销</name>
+                </field>
+                <field code="flastUpdatTime" type="datetime(19)" null="true">
+                    <name>更新时间</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fisLimit" type="tinyint(1)" null="true">
+                    <name></name>
+                </field>
+                <field code="ffees" type="decimal(28,8)" null="true">
+                    <name>未成交费率</name>
+                </field>
+                <field code="fleftfees" type="decimal(28,8)" null="true">
+                    <name>已成交费率</name>
+                </field>
+                <field code="fhasSubscription" type="tinyint(4)" null="true">
+                    <name>是否提交描述</name>
+                </field>
+                <field code="fissend" type="tinyint(4)" null="true">
+                    <name>是否发送</name>
+                </field>
+                <field code="processTime" type="datetime(19)" null="true">
+                    <name>处理时间</name>
+                </field>
+                <field code="isRobotType" type="int(11)" null="true">
+                    <name>交易类别(0.机器人创立1.普通用户创立)</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fentrustlog">
+            <name>委托交易列表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name>id</name>
+                </field>
+                <field code="FEn_fId" type="int(11)" null="true">
+                    <name>fentrust.fId</name>
+                </field>
+                <field code="fAmount" type="decimal(28,8)" null="true">
+                    <name>成交总金额</name>
+                </field>
+                <field code="fCreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fPrize" type="decimal(28,8)" null="true">
+                    <name>单价</name>
+                </field>
+                <field code="fCount" type="decimal(28,8)" null="true">
+                    <name>成交数量</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="isactive" type="tinyint(1)" null="true">
+                    <name>是否有效</name>
+                </field>
+                <field code="ftrademapping" type="int(11)" null="true">
+                    <name>ftrademapping.fid</name>
+                </field>
+                <field code="fEntrustType" type="int(11)" null="true">
+                    <name>交易类型(0买1卖)</name>
+                </field>
+                <field code="ffees" type="decimal(28,8)" null="true">
+                    <name>手续费</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fentrustplan">
+            <name>交易表</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="FUs_fId" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="fVi_fId" type="int(11)" null="true">
+                    <name>fvirtualcointype.fId</name>
+                </field>
+                <field code="fCreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fCount" type="decimal(16,6)" null="true">
+                    <name>数量</name>
+                </field>
+                <field code="fPrize" type="decimal(16,6)" null="true">
+                    <name>单价</name>
+                </field>
+                <field code="fAmount" type="decimal(16,6)" null="true">
+                    <name>金额</name>
+                </field>
+                <field code="fStatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="entrust_id" type="int(11)" null="true">
+                    <name>fentrust.fId</name>
+                </field>
+                <field code="ftype" type="int(11)" null="true">
+                    <name>交易类别</name>
+                </field>
+                <field code="fisLimit" type="tinyint(1)" null="true">
+                    <name></name>
+                </field>
+            </fields>
+        </table>
+        <table code="ffees">
+            <name>交易手续费</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="ffee" type="decimal(28,8)" null="true">
+                    <name>手续费</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="ftrademapping" type="int(11)" null="true">
+                    <name>ftrademapping.fId</name>
+                </field>
+                <field code="flevel" type="int(11)" null="true">
+                    <name>级别</name>
+                </field>
+                <field code="fbuyfee" type="decimal(28,8)" null="true">
+                    <name>买入手续费</name>
+                </field>
+            </fields>
+        </table>
+        <table code="ffriendlink">
+            <name>友情链接表</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fName" type="varchar(128)" null="true">
+                    <name>链接名称</name>
+                </field>
+                <field code="fName_en" type="varchar(128)" null="true">
+                    <name>英文链接名称</name>
+                </field>
+                <field code="fName_in" type="varchar(128)" null="true">
+                    <name>印度文名称</name>
+                </field>
+                <field code="fDescription" type="varchar(1024)" null="true">
+                    <name>描述</name>
+                </field>
+                <field code="fDescription_en" type="varchar(1024)" null="true">
+                    <name>英文描述</name>
+                </field>
+                <field code="fDescription_in" type="varchar(1024)" null="true">
+                    <name>印度文描述</name>
+                </field>
+                <field code="fOrder" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fCreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fUrl" type="varchar(128)" null="true">
+                    <name>链接</name>
+                </field>
+                <field code="fType" type="int(11)" null="true">
+                    <name>类别</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fimages" type="varchar(200)" null="true">
+                    <name>图片地址</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fgoods">
+            <name>商品表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fname" type="varchar(100)" null="true">
+                    <name>商品名称</name>
+                </field>
+                <field code="fprice" type="decimal(16,6)" null="true">
+                    <name>会员价</name>
+                </field>
+                <field code="fscore" type="decimal(16,6)" null="true">
+                    <name>评分</name>
+                </field>
+                <field code="ftotalQty" type="int(11)" null="true">
+                    <name>总数量</name>
+                </field>
+                <field code="flastQty" type="int(11)" null="true">
+                    <name>未成交数量</name>
+                </field>
+                <field code="fdescription" type="mediumtext(16777215)" null="true">
+                    <name>描述</name>
+                </field>
+                <field code="fprovince" type="varchar(50)" null="true">
+                    <name></name>
+                </field>
+                <field code="fcity" type="varchar(50)" null="true">
+                    <name>城市</name>
+                </field>
+                <field code="fcreatetime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fstatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fsupplierNo" type="varchar(50)" null="true">
+                    <name>商家UID</name>
+                </field>
+                <field code="fisVirtual" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+                <field code="fpictureUrl" type="varchar(100)" null="true">
+                    <name>图片地址</name>
+                </field>
+                <field code="fsellQty" type="int(11)" null="true">
+                    <name>卖出数量</name>
+                </field>
+                <field code="fmarketPrice" type="decimal(16,6)" null="true">
+                    <name>市场价</name>
+                </field>
+                <field code="ftype" type="int(11)" null="true">
+                    <name>fgoodtype.fid</name>
+                </field>
+                <field code="fqq" type="varchar(50)" null="true">
+                    <name>QQ</name>
+                </field>
+                <field code="fpostageAmt" type="decimal(16,6)" null="true">
+                    <name>邮费</name>
+                </field>
+                <field code="fbaoyouAmt" type="decimal(16,6)" null="true">
+                    <name>大于多少包邮</name>
+                </field>
+                <field code="fstyleName" type="varchar(10)" null="true">
+                    <name>自定义名称</name>
+                </field>
+                <field code="fstyleType" type="varchar(200)" null="true">
+                    <name>自定义类型</name>
+                </field>
+                <field code="fpictureUrl1" type="varchar(100)" null="true">
+                    <name>自定义图片地址</name>
+                </field>
+                <field code="fpictureUrl2" type="varchar(100)" null="true">
+                    <name>自定义图片地址</name>
+                </field>
+                <field code="fstyleName1" type="varchar(10)" null="true">
+                    <name>自定义名称</name>
+                </field>
+                <field code="fstyleType1" type="varchar(200)" null="true">
+                    <name>自定义类型</name>
+                </field>
+                <field code="fbuyType" type="varchar(200)" null="true">
+                    <name>付款币ID</name>
+                </field>
+                <field code="fseq" type="int(11)" null="true">
+                    <name>显示序号</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fgoodsaddress">
+            <name>商家地址表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fprovince" type="varchar(50)" null="true">
+                    <name></name>
+                </field>
+                <field code="fcity" type="varchar(50)" null="true">
+                    <name>城市</name>
+                </field>
+                <field code="fdesc" type="varchar(100)" null="true">
+                    <name>顺序</name>
+                </field>
+                <field code="frecName" type="varchar(50)" null="true">
+                    <name>交易名称</name>
+                </field>
+                <field code="fphone" type="varchar(20)" null="true">
+                    <name>电话</name>
+                </field>
+                <field code="postalcode" type="varchar(20)" null="true">
+                    <name></name>
+                </field>
+                <field code="fcreatetime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fuserid" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="fdist" type="varchar(50)" null="true">
+                    <name></name>
+                </field>
+            </fields>
+        </table>
+        <table code="fgoodscomm">
+            <name></name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fgoodsid" type="int(11)" null="true">
+                    <name>fgoods.fid</name>
+                </field>
+                <field code="fshoppinglogid" type="int(11)" null="true">
+                    <name>fshoppinglog.fid</name>
+                </field>
+                <field code="ftype" type="int(11)" null="true">
+                    <name>商品类别</name>
+                </field>
+                <field code="fcontent" type="varchar(500)" null="true">
+                    <name>内容</name>
+                </field>
+                <field code="fcreatetime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fgoodtype">
+            <name>商品类别表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fname" type="varchar(50)" null="true">
+                    <name>类别名称</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fintrolinfo">
+            <name>推广收益列表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name>id</name>
+                </field>
+                <field code="fuserid" type="int(11)" null="true">
+                    <name>用户id</name>
+                </field>
+                <field code="ftitle" type="varchar(100)" null="true">
+                    <name>收益名称</name>
+                </field>
+                <field code="fqty" type="decimal(16,6)" null="true">
+                    <name>推广收益</name>
+                </field>
+                <field code="fcreatetime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fiscny" type="tinyint(4)" null="true">
+                    <name>是否人民币</name>
+                </field>
+                <field code="fname" type="varchar(100)" null="true">
+                    <name>名和曾</name>
+                </field>
+                <field code="ftitle_en" type="varchar(100)" null="true">
+                    <name>英文标题</name>
+                </field>
+            </fields>
+        </table>
+        <table code="flevel_setting">
+            <name>会员登记设置表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="level" type="int(11)" null="true">
+                    <name>等级</name>
+                </field>
+                <field code="score" type="decimal(20,8)" null="true">
+                    <name>分数</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="score2" type="decimal(20,8)" null="true">
+                    <name>分数</name>
+                </field>
+            </fields>
+        </table>
+        <table code="flimittrade">
+            <name>交易</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="ftrademapping" type="int(11)" null="true">
+                    <name>ftrademapping.fid</name>
+                </field>
+                <field code="fpercent" type="decimal(28,8)" null="true">
+                    <name>百分比</name>
+                </field>
+                <field code="fupprice" type="decimal(28,8)" null="true">
+                    <name>涨价</name>
+                </field>
+                <field code="fdownprice" type="decimal(28,8)" null="true">
+                    <name>降价</name>
+                </field>
+            </fields>
+        </table>
+        <table code="flog">
+            <name>登录日志表</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fCreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fType" type="int(11)" null="true">
+                    <name>操作类型</name>
+                </field>
+                <field code="fkey1" type="varchar(128)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="fkey2" type="varchar(128)" null="true">
+                    <name>登录名</name>
+                </field>
+                <field code="fkey3" type="varchar(128)" null="true">
+                    <name>IP地址</name>
+                </field>
+                <field code="fkey4" type="varchar(128)" null="true">
+                    <name></name>
+                </field>
+                <field code="fkey5" type="varchar(128)" null="true">
+                    <name></name>
+                </field>
+                <field code="fkey6" type="varchar(128)" null="true">
+                    <name></name>
+                </field>
+            </fields>
+        </table>
+        <table code="flotteryaward">
+            <name>奖品信息</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fname" type="varchar(200)" null="true">
+                    <name>奖品名称</name>
+                </field>
+                <field code="fchance" type="decimal(16,6)" null="true">
+                    <name>中奖概率</name>
+                </field>
+                <field code="type" type="int(11)" null="true">
+                    <name>奖品类型</name>
+                </field>
+                <field code="count" type="decimal(16,6)" null="true">
+                    <name>奖品数量</name>
+                </field>
+                <field code="ftotal" type="decimal(16,6)" null="true">
+                    <name>奖品剩余总数量</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fangle" type="decimal(16,6)" null="true">
+                    <name>奖品位置</name>
+                </field>
+                <field code="fvirtualcointypeId" type="int(11)" null="true">
+                    <name>虚拟币fid</name>
+                </field>
+                <field code="furl" type="varchar(100)" null="true">
+                    <name>图片链接</name>
+                </field>
+                <field code="funit" type="varchar(50)" null="true">
+                    <name>单位</name>
+                </field>
+            </fields>
+        </table>
+        <table code="flotterylog">
+            <name>中奖信息表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="ftitle" type="varchar(200)" null="true">
+                    <name>奖品信息</name>
+                </field>
+                <field code="fuserId" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="fcreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fstatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="fflag" type="tinyint(1)" null="true">
+                    <name>是否实物奖品</name>
+                </field>
+                <field code="fqty" type="decimal(16,6)" null="true">
+                    <name>数量</name>
+                </field>
+                <field code="fvirtualcointypeid" type="int(11)" null="true">
+                    <name>虚拟币fid</name>
+                </field>
+            </fields>
+        </table>
+        <table code="flotteryrule">
+            <name></name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="ftitle" type="varchar(500)" null="true">
+                    <name>奖品信息</name>
+                </field>
+                <field code="frate" type="decimal(16,6)" null="true">
+                    <name>上线奖励比例</name>
+                </field>
+                <field code="ftimes" type="int(11)" null="true">
+                    <name>每天抽奖次数</name>
+                </field>
+                <field code="fcreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fmessage">
+            <name>消息表</name>
+            <remark />
+            <fields>
+                <field code="FId" type="int(11)" null="false">
+                    <name>主键流水号</name>
+                </field>
+                <field code="FStatus" type="int(11)" null="true">
+                    <name>消息状态</name>
+                </field>
+                <field code="FTitle" type="varchar(100)" null="true">
+                    <name>消息标题</name>
+                </field>
+                <field code="FContent" type="varchar(500)" null="true">
+                    <name>消息内容</name>
+                </field>
+                <field code="FReceiverId" type="int(11)" null="true">
+                    <name>接收者用户fuser.fid</name>
+                </field>
+                <field code="FCreatorId" type="int(11)" null="true">
+                    <name>创建人fadmin.fid</name>
+                </field>
+                <field code="FCreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="ftitle_en" type="varchar(100)" null="true">
+                    <name>英文标题</name>
+                </field>
+                <field code="FContent_en" type="varchar(500)" null="true">
+                    <name>英文消息内容</name>
+                </field>
+            </fields>
+        </table>
+        <table code="foperationlog">
+            <name>充值日志表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="ftype" type="int(11)" null="true">
+                    <name>汇款方式</name>
+                </field>
+                <field code="fstatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="famount" type="decimal(16,6)" null="true">
+                    <name>金额</name>
+                </field>
+                <field code="fcreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="flastUpdateTime" type="datetime(19)" null="true">
+                    <name>更新时间</name>
+                </field>
+                <field code="fdescription" type="varchar(256)" null="true">
+                    <name>描述</name>
+                </field>
+                <field code="fuid" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="fkey1" type="varchar(256)" null="true">
+                    <name>审核人</name>
+                </field>
+                <field code="fkey2" type="varchar(256)" null="true">
+                    <name></name>
+                </field>
+                <field code="fkey3" type="varchar(256)" null="true">
+                    <name></name>
+                </field>
+                <field code="fkey4" type="varchar(256)" null="true">
+                    <name></name>
+                </field>
+                <field code="fkey5" type="varchar(256)" null="true">
+                    <name></name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+            </fields>
+        </table>
+        <table code="fpaycode">
+            <name>支付码表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fkey" type="varchar(128)" null="true">
+                    <name>支付码A段</name>
+                </field>
+                <field code="fvalue" type="varchar(128)" null="true">
+                    <name>支付码B段</name>
+                </field>
+                <field code="fuser" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="famount" type="decimal(16,6)" null="true">
+                    <name>金额</name>
+                </field>
+                <field code="fstatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="fcreatetime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fuserTime" type="datetime(19)" null="true">
+                    <name>用户确认时间</name>
+                </field>
+                <field code="fadminTime" type="datetime(19)" null="true">
+                    <name>管理员审核时间</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fvi_id" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fproxyid" type="int(11)" null="true">
+                    <name>代理商ID</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fperiod">
+            <name>币种实时汇率表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fkai" type="decimal(28,8)" null="true">
+                    <name>开</name>
+                </field>
+                <field code="fgao" type="decimal(28,8)" null="true">
+                    <name>高</name>
+                </field>
+                <field code="fdi" type="decimal(28,8)" null="true">
+                    <name>低</name>
+                </field>
+                <field code="fshou" type="decimal(28,8)" null="true">
+                    <name>收</name>
+                </field>
+                <field code="fliang" type="decimal(28,8)" null="true">
+                    <name>总量</name>
+                </field>
+                <field code="ftime" type="datetime(19)" null="true">
+                    <name>插入时间</name>
+                </field>
+                <field code="ftrademapping" type="int(11)" null="true">
+                    <name>ftrademapping.fid</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fpool">
+            <name>虚拟地址池表</name>
+            <remark>所有的虚拟币地址均存入其中</remark>
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name>id</name>
+                </field>
+                <field code="fvi_type" type="int(11)" null="true">
+                    <name>虚拟币id</name>
+                </field>
+                <field code="faddress" type="varchar(128)" null="true">
+                    <name>虚拟币地址</name>
+                </field>
+                <field code="fstatus" type="int(11)" null="true">
+                    <name>状态</name>
+                    <option value="0">待使用</option>
+                    <option value="1">已使用</option>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name>版本</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fproxy">
+            <name>代理商表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="name" type="varchar(256)" null="true">
+                    <name>代理商名称</name>
+                </field>
+                <field code="amount" type="varchar(256)" null="true">
+                    <name>保证金</name>
+                </field>
+                <field code="qq" type="varchar(256)" null="true">
+                    <name>qq</name>
+                </field>
+                <field code="realname" type="varchar(256)" null="true">
+                    <name>真是姓名</name>
+                </field>
+                <field code="account" type="varchar(256)" null="true">
+                    <name>账号</name>
+                </field>
+                <field code="ftotalAmt" type="decimal(16,6)" null="true">
+                    <name>总金额</name>
+                </field>
+                <field code="flastAmt" type="decimal(16,6)" null="true">
+                    <name>未解冻金额</name>
+                </field>
+                <field code="fuserid" type="int(11)" null="true">
+                    <name>fuser.fid</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fstatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fquestion">
+            <name>提问记录列表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name>id</name>
+                </field>
+                <field code="ftype" type="int(11)" null="true">
+                    <name>提问类型</name>
+                </field>
+                <field code="fdesc" type="text(65535)" null="true">
+                    <name>提问内容</name>
+                </field>
+                <field code="ftelephone" type="varchar(32)" null="true">
+                    <name>提问手机号码</name>
+                </field>
+                <field code="fuid" type="int(11)" null="true">
+                    <name>提问人uid</name>
+                </field>
+                <field code="fstatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="fcreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fsolveTime" type="datetime(19)" null="true">
+                    <name>回复时间</name>
+                </field>
+                <field code="faid" type="int(11)" null="true">
+                    <name>回复管理员</name>
+                </field>
+                <field code="fname" type="varchar(32)" null="true">
+                    <name>名称</name>
+                </field>
+                <field code="fanswer" type="text(65535)" null="true">
+                    <name>回复内容</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+            </fields>
+        </table>
+        <table code="frole">
+            <name>用户角色类型</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name>id</name>
+                </field>
+                <field code="fname" type="varchar(64)" null="false">
+                    <name>角色名称</name>
+                </field>
+                <field code="fdescription" type="varchar(256)" null="true">
+                    <name>角色描述</name>
+                </field>
+            </fields>
+        </table>
+        <table code="frole_security">
+            <name>角色权限</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name>id</name>
+                </field>
+                <field code="froleid" type="int(11)" null="true">
+                    <name>角色id</name>
+                </field>
+                <field code="fsecurityid" type="int(11)" null="true">
+                    <name>安全id</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fscore">
+            <name>积分表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fscore" type="decimal(16,6)" null="true">
+                    <name>积分</name>
+                </field>
+                <field code="flevel" type="int(11)" null="true">
+                    <name>等级</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fgroupqty" type="int(11)" null="true">
+                    <name>分组</name>
+                </field>
+                <field code="ftreeqty" type="int(11)" null="true">
+                    <name>数量</name>
+                </field>
+                <field code="fkillQty" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fissend" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+                <field code="fissign" type="tinyint(4)" null="true">
+                    <name>是否标记</name>
+                </field>
+                <field code="fisopen" type="tinyint(4)" null="true">
+                    <name>是否开启</name>
+                </field>
+                <field code="fyungotimes" type="int(11)" null="true">
+                    <name>次数</name>
+                </field>
+                <field code="fa1" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fa2" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fa3" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fa4" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fa5" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fa6" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fa7" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fa8" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fc1" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fc2" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fc3" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fc4" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fc5" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fc6" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fc7" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fc8" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fc9" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fc10" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fc11" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fc12" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fc13" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fc14" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fd1" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fd2" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fd3" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fd4" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fd5" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="furl1" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="furl2" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fisproxy" type="tinyint(4)" null="true">
+                    <name>是否是代理商</name>
+                </field>
+                <field code="fVi_fId" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="ffrozenqty" type="decimal(16,6)" null="true">
+                    <name></name>
+                </field>
+            </fields>
+        </table>
+        <table code="fscore_record">
+            <name>积分记录表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fuser" type="int(11)" null="true">
+                    <name>fuser.fid</name>
+                </field>
+                <field code="type" type="int(11)" null="true">
+                    <name>类别</name>
+                </field>
+                <field code="score" type="decimal(20,8)" null="true">
+                    <name>积分</name>
+                </field>
+                <field code="remark" type="varchar(256)" null="true">
+                    <name>备注</name>
+                </field>
+                <field code="fcreatetime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fscore_setting">
+            <name>积分设置表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="type" type="int(11)" null="true">
+                    <name>类别</name>
+                </field>
+                <field code="score" type="decimal(20,8)" null="true">
+                    <name>积分</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="remark" type="varchar(100)" null="true">
+                    <name>备注</name>
+                </field>
+                <field code="remark_en" type="varchar(100)" null="true">
+                    <name>英文备注</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fsecurity">
+            <name>权限项目代码表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name>id</name>
+                </field>
+                <field code="fname" type="varchar(32)" null="true">
+                    <name>项目名称</name>
+                </field>
+                <field code="fdescription" type="varchar(255)" null="true">
+                    <name>项目说明</name>
+                </field>
+                <field code="fpriority" type="int(11)" null="true">
+                    <name>优先级</name>
+                </field>
+                <field code="fparentid" type="int(11)" null="true">
+                    <name>上层项目id</name>
+                </field>
+                <field code="furl" type="varchar(200)" null="true">
+                    <name>相应页面路径URL</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fshareplan">
+            <name></name>
+            <remark />
+            <fields>
+                <field code="FId" type="int(11)" null="false">
+                    <name>fId</name>
+                </field>
+                <field code="FStatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="FTitle" type="varchar(100)" null="true">
+                    <name>标题</name>
+                </field>
+                <field code="FAmount" type="decimal(16,6)" null="true">
+                    <name>总金额</name>
+                </field>
+                <field code="FCreatorId" type="int(11)" null="true">
+                    <name>审核人</name>
+                </field>
+                <field code="FCreateTime" type="datetime(19)" null="true">
+                    <name>审核时间</name>
+                </field>
+                <field code="FVirtualCoinTypeId" type="int(11)" null="true">
+                    <name>fvirtualcointype.fId</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="FType" type="int(11)" null="true">
+                    <name>类型</name>
+                </field>
+                <field code="FPercent" type="decimal(16,6)" null="true">
+                    <name>百分比</name>
+                </field>
+                <field code="FStartDate" type="datetime(19)" null="true">
+                    <name>有效开始时间</name>
+                </field>
+                <field code="FEndDate" type="datetime(19)" null="true">
+                    <name>有效结束时间</name>
+                </field>
+                <field code="FTotalCoinQty" type="decimal(16,6)" null="true">
+                    <name>所有币种总数量</name>
+                </field>
+                <field code="FsendCoinTypeId" type="int(11)" null="true">
+                    <name>发送币种类型ID</name>
+                </field>
+                <field code="ftypes" type="varchar(200)" null="true">
+                    <name>类型</name>
+                </field>
+                <field code="fcoinid" type="int(11)" null="true">
+                    <name>币种id</name>
+                </field>
+                <field code="ftitle_en" type="varchar(255)" null="true">
+                    <name>标题-英文</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fshareplanlog">
+            <name></name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name>fId</name>
+                </field>
+                <field code="fuserId" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="famount" type="decimal(16,6)" null="true">
+                    <name>分得金额/数量</name>
+                </field>
+                <field code="fsharePlanId" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fstatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="fcreatetime" type="datetime(19)" null="true">
+                    <name>创建日期</name>
+                </field>
+                <field code="fselfAmount" type="decimal(16,6)" null="true">
+                    <name>参与金额/数量</name>
+                </field>
+                <field code="fTotalAmount" type="decimal(16,6)" null="true">
+                    <name>平台总金额/数量</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="foneAmount" type="decimal(16,6)" null="true">
+                    <name></name>
+                </field>
+                <field code="fTotalQty" type="decimal(16,6)" null="true">
+                    <name>总数量</name>
+                </field>
+                <field code="ftype" type="varchar(200)" null="true">
+                    <name>类型</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fshoppinglog">
+            <name>购物记录</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name>订单ID</name>
+                </field>
+                <field code="fgoodsid" type="int(11)" null="true">
+                    <name>商品ID</name>
+                </field>
+                <field code="fuserid" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="fpriceAmt" type="decimal(16,6)" null="true">
+                    <name>消耗多少人民币</name>
+                </field>
+                <field code="fpriceCoin" type="decimal(16,6)" null="true">
+                    <name>消耗多少币</name>
+                </field>
+                <field code="fstatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="fpasswordA" type="varchar(50)" null="true">
+                    <name></name>
+                </field>
+                <field code="fpasswordB" type="varchar(50)" null="true">
+                    <name></name>
+                </field>
+                <field code="fcreatetime" type="datetime(19)" null="true">
+                    <name>下单日期</name>
+                </field>
+                <field code="fusetime" type="datetime(19)" null="true">
+                    <name></name>
+                </field>
+                <field code="fphone" type="varchar(50)" null="true">
+                    <name>手机号码</name>
+                </field>
+                <field code="freceiveAddress" type="varchar(300)" null="true">
+                    <name>收货地址</name>
+                </field>
+                <field code="fexpressNo" type="varchar(50)" null="true">
+                    <name>邮政编码</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fsendtime" type="datetime(19)" null="true">
+                    <name>发货日期</name>
+                </field>
+                <field code="fisShare" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+                <field code="fqty" type="int(11)" null="true">
+                    <name>购买数量</name>
+                </field>
+                <field code="fpriceScore" type="decimal(16,6)" null="true">
+                    <name></name>
+                </field>
+                <field code="fpaytype_s" type="varchar(50)" null="true">
+                    <name>支付类型</name>
+                </field>
+                <field code="fscore" type="decimal(16,6)" null="true">
+                    <name></name>
+                </field>
+                <field code="fperson" type="varchar(50)" null="true">
+                    <name></name>
+                </field>
+                <field code="fpostAmt" type="decimal(16,6)" null="true">
+                    <name></name>
+                </field>
+                <field code="fstyleType" type="varchar(20)" null="true">
+                    <name></name>
+                </field>
+                <field code="fiscomm" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+                <field code="fstyleType1" type="varchar(20)" null="true">
+                    <name></name>
+                </field>
+                <field code="fpayid" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fischarge" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+                <field code="fissend" type="tinyint(4)" null="true">
+                    <name>是否已发货</name>
+                </field>
+                <field code="fremark" type="varchar(200)" null="true">
+                    <name>备注</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fsubscription">
+            <name>众筹信息</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name>fId</name>
+                </field>
+                <field code="fcost_vi_id" type="int(11)" null="true">
+                    <name>支付类型</name>
+                </field>
+                <field code="fvi_id" type="int(11)" null="true">
+                    <name>fvirtualcointype.fId</name>
+                </field>
+                <field code="fisopen" type="tinyint(1)" null="true">
+                    <name>是否开放众筹</name>
+                </field>
+                <field code="ftotal" type="decimal(16,6)" null="true">
+                    <name>众筹总数量</name>
+                </field>
+                <field code="fprice" type="decimal(16,6)" null="true">
+                    <name>兑换比例</name>
+                </field>
+                <field code="fbuyCount" type="int(11)" null="true">
+                    <name>每人最大众筹数量</name>
+                </field>
+                <field code="fbuyTimes" type="int(11)" null="true">
+                    <name>每人最多众筹次数</name>
+                </field>
+                <field code="fcreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fBeginTime" type="datetime(19)" null="true">
+                    <name>开始时间</name>
+                </field>
+                <field code="fEndTime" type="datetime(19)" null="true">
+                    <name>结束时间</name>
+                </field>
+                <field code="fAlreadyByCount" type="decimal(16,6)" null="true">
+                    <name>已筹数量</name>
+                </field>
+                <field code="ftype" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fnumber" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fupprice" type="decimal(16,6)" null="true">
+                    <name></name>
+                </field>
+                <field code="fdownprice" type="decimal(16,6)" null="true">
+                    <name></name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="ftotalqty" type="decimal(16,6)" null="true">
+                    <name></name>
+                </field>
+                <field code="fqty" type="decimal(16,6)" null="true">
+                    <name></name>
+                </field>
+                <field code="fminbuyCount" type="decimal(16,6)" null="true">
+                    <name>每人最小众筹数量</name>
+                </field>
+                <field code="fcontent" type="mediumtext(16777215)" null="true">
+                    <name>项目介绍</name>
+                </field>
+                <field code="ftitle" type="varchar(300)" null="true">
+                    <name>标题</name>
+                </field>
+                <field code="fisICO" type="tinyint(4)" null="true">
+                    <name>是否ICO</name>
+                </field>
+                <field code="ffrozenType" type="tinyint(4)" null="true">
+                    <name>解冻类型</name>
+                </field>
+                <field code="frate" type="decimal(16,6)" null="true">
+                    <name>解冻比例</name>
+                </field>
+                <field code="fisstart" type="tinyint(4)" null="true">
+                    <name>是否开启解冻</name>
+                </field>
+                <field code="fimages" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="ftips" type="varchar(500)" null="true">
+                    <name></name>
+                </field>
+                <field code="faq" type="mediumtext(16777215)" null="true">
+                    <name></name>
+                </field>
+                <field code="ficoContent" type="mediumtext(16777215)" null="true">
+                    <name></name>
+                </field>
+                <field code="ftimes" type="int(11)" null="true">
+                    <name>次数</name>
+                </field>
+                <field code="faddress" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="ftips_en" type="varchar(500)" null="true">
+                    <name></name>
+                </field>
+                <field code="faq_en" type="mediumtext(16777215)" null="true">
+                    <name></name>
+                </field>
+                <field code="ficoContent_en" type="mediumtext(16777215)" null="true">
+                    <name></name>
+                </field>
+                <field code="fcontent_en" type="mediumtext(16777215)" null="true">
+                    <name></name>
+                </field>
+                <field code="ftitle_en" type="varchar(500)" null="true">
+                    <name>标题-英文</name>
+                </field>
+                <field code="fproject" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fproject_en" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fprojectLogo" type="varchar(255)" null="true">
+                    <name></name>
+                </field>
+                <field code="fbaipi" type="varchar(255)" null="true">
+                    <name>白皮书链接</name>
+                </field>
+                <field code="fcost_vi_ids" type="varchar(255)" null="true">
+                    <name>支付类型</name>
+                </field>
+                <field code="fprices" type="varchar(255)" null="true">
+                    <name>兑换比例</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fsubscriptiondetail">
+            <name>众筹项目描述</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fsub_fid" type="int(11)" null="true">
+                    <name>fsubscription.fId</name>
+                </field>
+                <field code="ftype" type="int(11)" null="true">
+                    <name>类型</name>
+                </field>
+                <field code="fcontent" type="mediumtext(16777215)" null="true">
+                    <name>项目内容</name>
+                </field>
+                <field code="fcontent_en" type="mediumtext(16777215)" null="true">
+                    <name>项目内容-英文</name>
+                </field>
+                <field code="ftitle" type="varchar(255)" null="true">
+                    <name>项目标题</name>
+                </field>
+                <field code="ftitle_en" type="varchar(255)" null="true">
+                    <name>项目标题-英文</name>
+                </field>
+                <field code="fcreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fsubscriptionlog">
+            <name></name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name>fId</name>
+                </field>
+                <field code="fsub_id" type="int(11)" null="true">
+                    <name>fsubscription.fId</name>
+                </field>
+                <field code="fuser_fid" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="fcount" type="decimal(16,6)" null="true">
+                    <name>众筹数量</name>
+                </field>
+                <field code="fprice" type="decimal(16,6)" null="true">
+                    <name>众筹价格</name>
+                </field>
+                <field code="ftotalCost" type="decimal(16,6)" null="true">
+                    <name>总金额</name>
+                </field>
+                <field code="fcreatetime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fischarge" type="varchar(50)" null="true">
+                    <name></name>
+                </field>
+                <field code="flastcount" type="decimal(16,6)" null="true">
+                    <name>未解冻数量</name>
+                </field>
+                <field code="fissend" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+                <field code="fstatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="flastqty" type="decimal(16,6)" null="true">
+                    <name></name>
+                </field>
+                <field code="foneqty" type="decimal(16,6)" null="true">
+                    <name></name>
+                </field>
+                <field code="frate" type="decimal(16,6)" null="true">
+                    <name></name>
+                </field>
+                <field code="fcost_vi_id" type="int(11)" null="true">
+                    <name>fvirtualcointype.fId</name>
+                </field>
+                <field code="fsubrule_id" type="int(11)" null="true">
+                    <name>fsubscriptionrule.fId</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fsubscriptionrule">
+            <name>兑换规则描述</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name>fId</name>
+                </field>
+                <field code="ftotal" type="decimal(16,6)" null="true">
+                    <name>兑换总量</name>
+                </field>
+                <field code="fAlreadyByCount" type="decimal(16,6)" null="true">
+                    <name>已兑换总量</name>
+                </field>
+                <field code="fprice" type="decimal(16,6)" null="true">
+                    <name>兑换价格</name>
+                </field>
+                <field code="fbuyCount" type="decimal(16,6)" null="true">
+                    <name>每人最大兑换数量</name>
+                </field>
+                <field code="fbuyTimes" type="int(11)" null="true">
+                    <name>每人最多兑换次数</name>
+                </field>
+                <field code="fminbuyCount" type="decimal(16,6)" null="true">
+                    <name>每次最小兑换数量</name>
+                </field>
+                <field code="fcreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fvi_id" type="int(11)" null="true">
+                    <name>fvirtualcointype.fId</name>
+                </field>
+                <field code="fsub_id" type="int(11)" null="true">
+                    <name>fsubscription.fId</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+            </fields>
+        </table>
+        <table code="fsystemargs">
+            <name></name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="fKey" type="varchar(100)" null="true">
+                    <name>KEY</name>
+                </field>
+                <field code="fValue" type="varchar(2048)" null="true">
+                    <name>参数值</name>
+                </field>
+                <field code="fDescription" type="varchar(1024)" null="true">
+                    <name>备注</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+            </fields>
+        </table>
+        <table code="ftradehistory">
+            <name>历史收盘价列表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name>id</name>
+                </field>
+                <field code="fdate" type="date(10)" null="true">
+                    <name>日期</name>
+                </field>
+                <field code="fprice" type="decimal(28,8)" null="true">
+                    <name>收盘价</name>
+                </field>
+                <field code="fvid" type="int(11)" null="true">
+                    <name>虚拟币类型</name>
+                </field>
+                <field code="ftotal" type="decimal(28,8)" null="true">
+                    <name>总交易量</name>
+                </field>
+            </fields>
+        </table>
+        <table code="ftrademapping">
+            <name>法币类型匹配列表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name>序号</name>
+                </field>
+                <field code="fvirtualcointype1" type="int(11)" null="true">
+                    <name>法币id</name>
+                </field>
+                <field code="fvirtualcointype2" type="int(11)" null="true">
+                    <name>交易币id</name>
+                </field>
+                <field code="ftradeTime" type="varchar(255)" null="true">
+                    <name>交易时间</name>
+                    <remark>默认为24小时</remark>
+                </field>
+                <field code="fislimit" type="tinyint(1)" null="true">
+                    <name>是否限卖</name>
+                </field>
+                <field code="fstatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fcount1" type="int(11)" null="true">
+                    <name>数量小数位</name>
+                </field>
+                <field code="fcount2" type="int(11)" null="true">
+                    <name>单价小数位</name>
+                </field>
+                <field code="fminBuyCount" type="decimal(28,8)" null="true">
+                    <name>最小买入数量</name>
+                </field>
+                <field code="fminBuyPrice" type="decimal(28,8)" null="true">
+                    <name>最小买入单价</name>
+                </field>
+                <field code="fminBuyAmount" type="decimal(28,8)" null="true">
+                    <name>最小买入金额</name>
+                </field>
+                <field code="fprice" type="decimal(28,8)" null="true">
+                    <name>开盘价</name>
+                </field>
+                <field code="ftraderate" type="decimal(20,8)" null="true">
+                    <name>交易费率</name>
+                </field>
+                <field code="ftype" type="int(11)" null="true">
+                    <name>级别</name>
+                    <option value="1">币主板</option>
+                    <option value="2">币创板</option>
+                </field>
+                <field code="fisIntrol" type="tinyint(4)" null="true">
+                    <name>买币是否奖励</name>
+                </field>
+                <field code="ftigerUid" type="varchar(100)" null="true">
+                    <name>操盘手ID</name>
+                </field>
+                <field code="fintrolRate" type="varchar(100)" null="true">
+                    <name>奖励比例</name>
+                </field>
+                <field code="fminSellCount" type="decimal(16,6)" null="true">
+                    <name>最小卖出数量</name>
+                </field>
+                <field code="fminSellPrice" type="decimal(16,6)" null="true">
+                    <name>最低卖出价格</name>
+                </field>
+                <field code="fminSellAmount" type="decimal(16,6)" null="true">
+                    <name>最小卖出金额</name>
+                </field>
+                <field code="ftradedesc" type="varchar(500)" null="true">
+                    <name>交易描述</name>
+                </field>
+                <field code="ftradeDesc_en" type="varchar(200)" null="true">
+                    <name>交易描述-英文</name>
+                </field>
+                <field code="fseq" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fisSta" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+                <field code="fisSun" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+                <field code="fnoTradeDate" type="text(65535)" null="true">
+                    <name></name>
+                </field>
+                <field code="fisCancel" type="tinyint(4)" null="true">
+                    <name>是否取消</name>
+                </field>
+                <field code="fmaxtimes" type="int(11)" null="true">
+                    <name>每天最大挂单次数</name>
+                </field>
+                <field code="fmaxBuyCount" type="decimal(16,6)" null="true">
+                    <name>最大买入数量</name>
+                </field>
+                <field code="fmaxSellCount" type="decimal(16,6)" null="true">
+                    <name>最大卖出数量</name>
+                </field>
+            </fields>
+        </table>
+        <table code="ftransportlog">
+            <name></name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name>fId</name>
+                </field>
+                <field code="famount" type="decimal(16,6)" null="true">
+                    <name>金额</name>
+                </field>
+                <field code="faddress" type="varchar(128)" null="true">
+                    <name>交易地址</name>
+                </field>
+                <field code="ftype" type="int(11)" null="true">
+                    <name>交易类型</name>
+                </field>
+                <field code="fcreatetime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fuser" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="ffees" type="decimal(16,6)" null="true">
+                    <name>费率</name>
+                </field>
+                <field code="fstatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+            </fields>
+        </table>
+        <table code="fuser">
+            <name>用户信息表</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name></name>
+                </field>
+                <field code="floginName" type="varchar(32)" null="true">
+                    <name>登录名</name>
+                </field>
+                <field code="fLoginPassword" type="varchar(32)" null="true">
+                    <name>登录密码</name>
+                </field>
+                <field code="fTradePassword" type="varchar(32)" null="true">
+                    <name>交易密码</name>
+                </field>
+                <field code="fNickName" type="varchar(32)" null="true">
+                    <name>会员昵称</name>
+                </field>
+                <field code="fRealName" type="varchar(32)" null="true">
+                    <name>会员真实姓名</name>
+                </field>
+                <field code="fTelephone" type="varchar(32)" null="true">
+                    <name>手机号</name>
+                </field>
+                <field code="fEmail" type="varchar(128)" null="true">
+                    <name>电子邮箱</name>
+                </field>
+                <field code="fIdentityNo" type="varchar(128)" null="true">
+                    <name>证件号码</name>
+                </field>
+                <field code="fRegisterTime" type="datetime(19)" null="true">
+                    <name>注册时间</name>
+                </field>
+                <field code="fLastLoginTime" type="datetime(19)" null="true">
+                    <name>最后登录时间</name>
+                </field>
+                <field code="fGoogleAuthenticator" type="varchar(128)" null="true">
+                    <name></name>
+                </field>
+                <field code="fgoogleurl" type="varchar(128)" null="true">
+                    <name>google地址</name>
+                </field>
+                <field code="fMobilMessageCode" type="varchar(128)" null="true">
+                    <name>手机短信验证码</name>
+                </field>
+                <field code="fStatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="fIsTelValidate" type="tinyint(1)" null="true">
+                    <name>是否电话验证</name>
+                </field>
+                <field code="fIsMailValidate" type="tinyint(1)" null="true">
+                    <name>是否邮箱验证</name>
+                </field>
+                <field code="fGoogleValidate" type="tinyint(1)" null="true">
+                    <name>是否谷歌验证</name>
+                </field>
+                <field code="fopenTelValidate" type="tinyint(1)" null="true">
+                    <name>是否开启手机号验证</name>
+                </field>
+                <field code="fopenGoogleValidate" type="tinyint(1)" null="true">
+                    <name>是否开启谷歌验证码验证</name>
+                </field>
+                <field code="fopenSecondValidate" type="tinyint(1)" null="true">
+                    <name>是否开启二级验证</name>
+                </field>
+                <field code="fgoogleBind" type="tinyint(1)" null="true">
+                    <name>是否绑定google账号</name>
+                </field>
+                <field code="fpostRealValidate" type="tinyint(1)" null="true">
+                    <name>提交实名认证</name>
+                </field>
+                <field code="fhasRealValidate" type="tinyint(1)" null="true">
+                    <name>已经实名认证</name>
+                </field>
+                <field code="fpostRealValidateTime" type="datetime(19)" null="true">
+                    <name>提交实名认证时间</name>
+                </field>
+                <field code="fhasRealValidateTime" type="datetime(19)" null="true">
+                    <name>已经实名认证时间</name>
+                </field>
+                <field code="fidentityType" type="int(11)" null="true">
+                    <name>证件类型</name>
+                </field>
+                <field code="fisTelephoneBind" type="tinyint(1)" null="true">
+                    <name>是否绑定手机号</name>
+                </field>
+                <field code="flastUpdateTime" type="datetime(19)" null="true">
+                    <name>最后更新时间</name>
+                </field>
+                <field code="fareaCode" type="varchar(32)" null="true">
+                    <name>区号</name>
+                </field>
+                <field code="fscoreid" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fIdentityPath" type="varchar(256)" null="true">
+                    <name>身份照路径</name>
+                </field>
+                <field code="fapi" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fIdentityPath2" type="varchar(256)" null="true">
+                    <name>身份照路径</name>
+                </field>
+                <field code="fIntroUser_id" type="int(11)" null="true">
+                    <name>推荐人id</name>
+                </field>
+                <field code="fInvalidateIntroCount" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="flastUpdateZhongdouTime" type="datetime(19)" null="true">
+                    <name></name>
+                </field>
+                <field code="fIsStartZhongDou" type="tinyint(1)" null="true">
+                    <name></name>
+                </field>
+                <field code="qqlogin" type="varchar(128)" null="true">
+                    <name></name>
+                </field>
+                <field code="faddress" type="varchar(400)" null="true">
+                    <name></name>
+                </field>
+                <field code="fregType" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fgrade" type="int(11)" null="true">
+                    <name>自身级别</name>
+                </field>
+                <field code="fuserno" type="varchar(50)" null="true">
+                    <name></name>
+                </field>
+                <field code="fbalancecny" type="decimal(16,6)" null="true">
+                    <name>人民币余额</name>
+                </field>
+                <field code="fbalancetmc" type="decimal(16,6)" null="true">
+                    <name></name>
+                </field>
+                <field code="fuserIntrolNo" type="varchar(100)" null="true">
+                    <name></name>
+                </field>
+                <field code="fisValid" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+                <field code="fistiger" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+                <field code="fregIp" type="varchar(100)" null="true">
+                    <name>注册IP</name>
+                </field>
+                <field code="flastLoginIp" type="varchar(100)" null="true">
+                    <name>最后登录IP</name>
+                </field>
+                <field code="fintrolUserNo" type="varchar(100)" null="true">
+                    <name></name>
+                </field>
+                <field code="salt" type="varchar(50)" null="true">
+                    <name></name>
+                </field>
+                <field code="fIdentityPath3" type="varchar(255)" null="true">
+                    <name>证件照路径</name>
+                </field>
+                <field code="fuserType" type="int(11)" null="true">
+                    <name>会员类型</name>
+                </field>
+                <field code="fServiceTradeRate" type="varchar(100)" null="true">
+                    <name></name>
+                </field>
+                <field code="fServiceSubRate" type="varchar(100)" null="true">
+                    <name></name>
+                </field>
+                <field code="fProxyNumber" type="varchar(100)" null="true">
+                    <name></name>
+                </field>
+                <field code="fProxyTradeRate" type="decimal(16,6)" null="true">
+                    <name>代理交易费率</name>
+                </field>
+                <field code="fProxySubRate" type="decimal(16,6)" null="true">
+                    <name></name>
+                </field>
+                <field code="fischeck" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+                <field code="fsex" type="varchar(50)" null="true">
+                    <name>性别</name>
+                </field>
+                <field code="country" type="varchar(100)" null="true">
+                    <name>国别</name>
+                </field>
+                <field code="fbirth" type="date(10)" null="true">
+                    <name>出生日期</name>
+                </field>
+                <field code="fpostHighValidate" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+                <field code="fhasHighValidate" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+                <field code="fpostHighValidateTime" type="datetime(19)" null="true">
+                    <name></name>
+                </field>
+                <field code="fhasHighValidateTime" type="datetime(19)" null="true">
+                    <name></name>
+                </field>
+                <field code="famt" type="decimal(20,8)" null="true">
+                    <name></name>
+                </field>
+                <field code="fIntroUser_id3" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fIntroUser_id2" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fpostImgValidate" type="tinyint(4)" null="true">
+                    <name>提交身份证认证</name>
+                </field>
+                <field code="fhasImgValidate" type="tinyint(4)" null="true">
+                    <name>身份证认证</name>
+                </field>
+                <field code="fpostImgValidateTime" type="datetime(19)" null="true">
+                    <name>提交图片验证</name>
+                </field>
+                <field code="fhasImgValidateTime" type="datetime(19)" null="true">
+                    <name>图片验证时间</name>
+                </field>
+                <field code="fhasVideoValidate" type="tinyint(4)" null="true">
+                    <name>视频验证</name>
+                </field>
+                <field code="fhasVideoValidateTime" type="datetime(19)" null="true">
+                    <name>视频验证时间</name>
+                </field>
+                <field code="fGoogleCheck" type="bit(1)" null="true">
+                    <name>是否开启谷歌认证</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fusersetting">
+            <name>用户设置表</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name>用户设置</name>
+                </field>
+                <field code="fuser" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="fisAutoReturnToAccount" type="tinyint(1)" null="true">
+                    <name>是否自动退回帐户</name>
+                </field>
+                <field code="fscore" type="decimal(16,6)" null="true">
+                    <name>分数</name>
+                </field>
+                <field code="flotteryeggTimes" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fticketQty" type="decimal(16,6)" null="true">
+                    <name>数量</name>
+                </field>
+                <field code="fsendDate" type="datetime(19)" null="true">
+                    <name>发送时间</name>
+                </field>
+                <field code="fissend" type="tinyint(4)" null="true">
+                    <name>是否发送</name>
+                </field>
+                <field code="fp2pmsgDate1" type="datetime(19)" null="true">
+                    <name></name>
+                </field>
+                <field code="fp2pmsgDate2" type="datetime(19)" null="true">
+                    <name></name>
+                </field>
+            </fields>
+        </table>
+        <table code="fvalidateemail">
+            <name>邮箱验证表</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name>fId</name>
+                </field>
+                <field code="FUs_fId" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="fTitle" type="varchar(256)" null="true">
+                    <name>标题</name>
+                </field>
+                <field code="fContent" type="text(65535)" null="true">
+                    <name>内容</name>
+                </field>
+                <field code="fStatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="fCreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fSendTime" type="datetime(19)" null="true">
+                    <name>发送时间</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="email" type="varchar(128)" null="true">
+                    <name>邮箱地址</name>
+                </field>
+                <field code="flang" type="int(11)" null="true">
+                    <name>语言</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fvalidatemessage">
+            <name>短信验证表</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name>fId</name>
+                </field>
+                <field code="FUs_fId" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="fPhone" type="varchar(32)" null="true">
+                    <name>手机号</name>
+                </field>
+                <field code="fContent" type="text(65535)" null="true">
+                    <name>短信内容</name>
+                </field>
+                <field code="fStatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="fCreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fSendTime" type="datetime(19)" null="true">
+                    <name>发送时间</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="flang" type="int(11)" null="true">
+                    <name>语言</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fvirtualaddress">
+            <name>会员虚拟币充值地址列表</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name>id</name>
+                </field>
+                <field code="fVi_fId" type="int(11)" null="true">
+                    <name>虚拟币id</name>
+                </field>
+                <field code="fAdderess" type="varchar(180)" null="true">
+                    <name>地址</name>
+                </field>
+                <field code="fuid" type="int(11)" null="true">
+                    <name>用户id</name>
+                </field>
+                <field code="fCreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name>版本</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fvirtualaddress_withdraw">
+            <name>会员虚拟币提现地址列表</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name>id</name>
+                </field>
+                <field code="fVi_fId" type="int(11)" null="true">
+                    <name>虚拟币类型</name>
+                </field>
+                <field code="fAdderess" type="varchar(128)" null="true">
+                    <name>地址</name>
+                </field>
+                <field code="fuid" type="int(11)" null="true">
+                    <name>用户id</name>
+                </field>
+                <field code="fCreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name>版本</name>
+                </field>
+                <field code="fremark" type="varchar(100)" null="true">
+                    <name>备注</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fvirtualcaptualoperation">
+            <name>虚拟币操作总表</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name>id</name>
+                </field>
+                <field code="FUs_fId2" type="int(11)" null="true">
+                    <name>用户id</name>
+                </field>
+                <field code="fVi_fId2" type="int(11)" null="true">
+                    <name>虚拟币类型</name>
+                </field>
+                <field code="fCreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fAmount" type="decimal(28,8)" null="true">
+                    <name>数量</name>
+                </field>
+                <field code="ffees" type="decimal(16,6)" null="true">
+                    <name>手续费</name>
+                </field>
+                <field code="fType" type="int(11)" null="true">
+                    <name>交易类型</name>
+                    <option value="1">虚拟币充值</option>
+                    <option value="2">虚拟币提现</option>
+                </field>
+                <field code="fStatus" type="int(11)" null="true">
+                    <name>状态</name>
+                    <option value="1">等待提现</option>
+                    <option value="4">用户撤销</option>
+                </field>
+                <field code="flastUpdateTime" type="datetime(19)" null="true">
+                    <name>最后修改时间</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name>版本</name>
+                </field>
+                <field code="withdraw_virtual_address" type="varchar(128)" null="true">
+                    <name>提现地址</name>
+                </field>
+                <field code="recharge_virtual_address" type="varchar(128)" null="true">
+                    <name>充值地址</name>
+                </field>
+                <field code="ftradeUniqueNumber" type="varchar(180)" null="true">
+                    <name>交易ID</name>
+                </field>
+                <field code="fconfirmations" type="int(11)" null="true">
+                    <name>确认数</name>
+                </field>
+                <field code="fhasOwner" type="tinyint(1)" null="true">
+                    <name></name>
+                </field>
+                <field code="fischarge" type="varchar(100)" null="true">
+                    <name></name>
+                </field>
+                <field code="remark" type="varchar(128)" null="true">
+                    <name>备注</name>
+                </field>
+                <field code="fremark" type="varchar(128)" null="true">
+                    <name>备注</name>
+                </field>
+                <field code="fisaudit" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+                <field code="fissend" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+                <field code="fisDeal" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+            </fields>
+        </table>
+        <table code="fvirtualcointype">
+            <name>虚拟币类型表</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name>id</name>
+                </field>
+                <field code="fName" type="varchar(32)" null="true">
+                    <name>名称</name>
+                </field>
+                <field code="fName_en" type="varchar(32)" null="true">
+                    <name>英文名称</name>
+                    <remark>暂未使用</remark>
+                </field>
+                <field code="fName_in" type="varchar(32)" null="true">
+                    <name>未知</name>
+                </field>
+                <field code="fShortName" type="varchar(32)" null="true">
+                    <name>简称</name>
+                </field>
+                <field code="fDescription" type="varchar(32)" null="true">
+                    <name>描述</name>
+                </field>
+                <field code="fDescription_en" type="varchar(32)" null="true">
+                    <name>英文描述</name>
+                </field>
+                <field code="fDescription_in" type="varchar(32)" null="true">
+                    <name>未知</name>
+                </field>
+                <field code="fAddTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fstatus" type="int(11)" null="true">
+                    <name>状态</name>
+                    <option value="1">正常</option>
+                    <option value="2">禁用</option>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name>版本</name>
+                </field>
+                <field code="fSymbol" type="varchar(3)" null="true">
+                    <name>符号</name>
+                </field>
+                <field code="faccess_key" type="varchar(50)" null="true">
+                    <name>ACCESS_KEY</name>
+                </field>
+                <field code="fsecrt_key" type="varchar(50)" null="true">
+                    <name>SECRT_KEY</name>
+                </field>
+                <field code="fip" type="varchar(50)" null="true">
+                    <name>IP地址</name>
+                </field>
+                <field code="fport" type="varchar(10)" null="true">
+                    <name>端口号</name>
+                </field>
+                <field code="FIsWithDraw" type="tinyint(1)" null="true">
+                    <name>是否可以体现</name>
+                </field>
+                <field code="furl" type="varchar(100)" null="true">
+                    <name>币种图标URL</name>
+                </field>
+                <field code="fweburl" type="varchar(100)" null="true">
+                    <name></name>
+                </field>
+                <field code="ftype" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fisrecharge" type="tinyint(4)" null="true">
+                    <name>是否可以充值</name>
+                </field>
+                <field code="fisauto" type="tinyint(4)" null="true">
+                    <name>充值是否自动到帐</name>
+                </field>
+                <field code="fisautosend" type="tinyint(4)" null="true">
+                    <name>是否自动提币</name>
+                </field>
+                <field code="fpassword" type="varchar(100)" null="true">
+                    <name>钱包密码</name>
+                </field>
+                <field code="isEth" type="tinyint(4)" null="true">
+                    <name>是否ETH</name>
+                </field>
+                <field code="mainAddr" type="varchar(100)" null="true">
+                    <name>汇总地址</name>
+                </field>
+                <field code="fisother" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+                <field code="faddress" type="varchar(100)" null="true">
+                    <name></name>
+                </field>
+                <field code="fblockcount" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fistransport" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+                <field code="ftotalqty" type="decimal(16,6)" null="true">
+                    <name>总量</name>
+                </field>
+                <field code="fregDesc" type="varchar(500)" null="true">
+                    <name>充值须知</name>
+                </field>
+                <field code="fwidDesc" type="varchar(500)" null="true">
+                    <name>提现须知</name>
+                </field>
+                <field code="fisToken" type="tinyint(1)" null="true">
+                    <name>是否ETH代币</name>
+                </field>
+                <field code="startBlockId" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fmaxwithdrawbtc" type="decimal(16,6)" null="true">
+                    <name></name>
+                </field>
+                <field code="fminwithdrawbtc" type="decimal(16,6)" null="true">
+                    <name></name>
+                </field>
+                <field code="ftimes" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fmaxDaywithdrawbtc" type="decimal(16,6)" null="true">
+                    <name></name>
+                </field>
+                <field code="fmaxDaywithdrawbtc_high" type="decimal(16,6)" null="true">
+                    <name></name>
+                </field>
+                <field code="ftimes_high" type="int(11)" null="true">
+                    <name></name>
+                </field>
+                <field code="fisUsdt" type="tinyint(4)" null="true">
+                    <name>是否USDT</name>
+                </field>
+                <field code="fisBTC" type="tinyint(4)" null="true">
+                    <name>是否BTC</name>
+                </field>
+                <field code="fisEth" type="tinyint(1)" null="true">
+                    <name>是否以太坊</name>
+                </field>
+                <field code="fisASCH" type="tinyint(4)" null="true">
+                    <name></name>
+                </field>
+                <field code="fregqty" type="decimal(28,8)" null="true">
+                    <name></name>
+                </field>
+            </fields>
+        </table>
+        <table code="fvirtualoperationlog">
+            <name>虚拟币操作日志</name>
+            <remark />
+            <fields>
+                <field code="FId" type="int(11)" null="false">
+                    <name>FId</name>
+                </field>
+                <field code="FQty" type="decimal(28,8)" null="true">
+                    <name>数量</name>
+                </field>
+                <field code="FVirtualCoinTypeId" type="int(11)" null="true">
+                    <name>fvirtualcointype.fId</name>
+                </field>
+                <field code="FStatus" type="int(11)" null="true">
+                    <name>状态</name>
+                </field>
+                <field code="FUserId" type="int(11)" null="true">
+                    <name>fuser.fId</name>
+                </field>
+                <field code="FIsSendMsg" type="tinyint(4)" null="true">
+                    <name>是否发送通知</name>
+                </field>
+                <field code="FCreatorId" type="int(11)" null="true">
+                    <name>fadmin.fId</name>
+                </field>
+                <field code="FCreateTime" type="datetime(19)" null="true">
+                    <name>审核时间</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name>版本</name>
+                </field>
+                <field code="ffrozenQty" type="decimal(28,8)" null="true">
+                    <name>冻结数量</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fvirtualwallet">
+            <name>虚拟币钱包</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name>id</name>
+                </field>
+                <field code="fVi_fId" type="int(11)" null="true">
+                    <name>虚拟币类型</name>
+                </field>
+                <field code="fTotal" type="decimal(28,8)" null="true">
+                    <name>总数</name>
+                </field>
+                <field code="fFrozen" type="decimal(28,8)" null="true">
+                    <name>冻结资产</name>
+                </field>
+                <field code="fLastUpdateTime" type="datetime(19)" null="true">
+                    <name>最后更新时间</name>
+                </field>
+                <field code="fuid" type="int(11)" null="true">
+                    <name>fuid</name>
+                </field>
+                <field code="fBorrowBtc" type="decimal(28,8)" null="true">
+                    <name>已借款</name>
+                </field>
+                <field code="fCanlendBtc" type="decimal(28,8)" null="true">
+                    <name>可放款</name>
+                </field>
+                <field code="fFrozenLendBtc" type="decimal(28,8)" null="true">
+                    <name>冻结放款</name>
+                </field>
+                <field code="fAlreadyLendBtc" type="decimal(28,8)" null="true">
+                    <name>已放款</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name>版本</name>
+                </field>
+                <field code="fHaveAppointBorrowBtc" type="decimal(28,8)" null="true">
+                    <name>已预约借款</name>
+                </field>
+                <field code="fcanSellQty" type="decimal(20,8)" null="true">
+                    <name>可卖出数量</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fwebbaseinfo">
+            <name>后台基本信息</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name>fId</name>
+                </field>
+                <field code="fTitle" type="varchar(256)" null="true">
+                    <name>网站标题</name>
+                </field>
+                <field code="fTitle_en" type="varchar(256)" null="true">
+                    <name>网站标题-英文</name>
+                </field>
+                <field code="fTitle_in" type="varchar(256)" null="true">
+                    <name>网站标题-印度文</name>
+                </field>
+                <field code="fKeywords" type="varchar(256)" null="true">
+                    <name>网站关键词-中文</name>
+                </field>
+                <field code="fKeywords_en" type="varchar(256)" null="true">
+                    <name>网站关键词-英文</name>
+                </field>
+                <field code="fKeywords_in" type="varchar(256)" null="true">
+                    <name>网站关键词-印度文</name>
+                </field>
+                <field code="fDescription" type="varchar(256)" null="true">
+                    <name>网站描述</name>
+                </field>
+                <field code="fDescription_en" type="varchar(256)" null="true">
+                    <name>网站描述-英文</name>
+                </field>
+                <field code="fDescription_in" type="varchar(256)" null="true">
+                    <name>网站描述-印度文</name>
+                </field>
+                <field code="fCopyRights" type="varchar(2000)" null="true">
+                    <name>版权</name>
+                </field>
+                <field code="fBeianInfo" type="varchar(256)" null="true">
+                    <name>备案号</name>
+                </field>
+                <field code="fSystemMail" type="varchar(256)" null="true">
+                    <name>认证代码</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name>版本</name>
+                </field>
+            </fields>
+        </table>
+        <table code="fwithdrawfees">
+            <name>提现费率</name>
+            <remark />
+            <fields>
+                <field code="fid" type="int(11)" null="false">
+                    <name>fid</name>
+                </field>
+                <field code="ffee" type="decimal(28,8)" null="true">
+                    <name>费率</name>
+                </field>
+                <field code="flevel" type="int(11)" null="true">
+                    <name>级别</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name>版本</name>
+                </field>
+                <field code="fvid" type="int(11)" null="true">
+                    <name>fvirtualcointype.fId</name>
+                </field>
+                <field code="famt" type="decimal(16,6)" null="true">
+                    <name>famt</name>
+                </field>
+                <field code="flastFee" type="decimal(16,6)" null="true">
+                    <name>flastFee</name>
+                </field>
+            </fields>
+        </table>
+        <table code="my18_cz_temp">
+            <name></name>
+            <remark />
+            <fields>
+                <field code="id" type="int(11)" null="false">
+                    <name>id</name>
+                </field>
+                <field code="O_id" type="varchar(50)" null="true">
+                    <name>订单id</name>
+                </field>
+                <field code="userid" type="int(11)" null="false">
+                    <name>用户id</name>
+                </field>
+                <field code="H_fee" type="decimal(11,2)" null="false">
+                    <name></name>
+                </field>
+                <field code="username" type="varchar(30)" null="false">
+                    <name>用户名</name>
+                </field>
+                <field code="dkkh" type="varchar(30)" null="false">
+                    <name>打款帐号</name>
+                </field>
+                <field code="dkrm" type="varchar(50)" null="false">
+                    <name>打款帐号户名</name>
+                </field>
+                <field code="dkje1" type="decimal(11,2)" null="false">
+                    <name>需要打款的金额</name>
+                </field>
+                <field code="dkje" type="decimal(11,2)" null="false">
+                    <name>申请打款金额</name>
+                </field>
+                <field code="state" type="int(11)" null="false">
+                    <name>充值状态:0未充值;1已充值</name>
+                </field>
+                <field code="sj" type="datetime(19)" null="false">
+                    <name>提交申请时间</name>
+                </field>
+                <field code="dksj" type="datetime(19)" null="true">
+                    <name>打款时间</name>
+                </field>
+                <field code="sjm" type="varchar(4)" null="true">
+                    <name>随机码</name>
+                </field>
+                <field code="xingwei" type="varchar(50)" null="true">
+                    <name>行为</name>
+                </field>
+                <field code="dkind" type="varchar(50)" null="true">
+                    <name></name>
+                </field>
+                <field code="huikuanren" type="varchar(50)" null="true">
+                    <name>汇款人</name>
+                </field>
+                <field code="ptype" type="varchar(30)" null="false">
+                    <name>打款方式</name>
+                </field>
+            </fields>
+        </table>
+        <table code="my18_pay_temp">
+            <name></name>
+            <remark />
+            <fields>
+                <field code="o_time" type="varchar(20)" null="true">
+                    <name></name>
+                </field>
+                <field code="dkind" type="varchar(50)" null="true">
+                    <name></name>
+                </field>
+                <field code="O_id" type="varchar(50)" null="false">
+                    <name></name>
+                </field>
+                <field code="xingwei" type="varchar(50)" null="true">
+                    <name></name>
+                </field>
+                <field code="M_name" type="varchar(50)" null="true">
+                    <name></name>
+                </field>
+                <field code="U_id" type="varchar(20)" null="true">
+                    <name></name>
+                </field>
+                <field code="addmoney" type="decimal(11,2)" null="false">
+                    <name></name>
+                </field>
+                <field code="zhuangtai" type="varchar(20)" null="true">
+                    <name></name>
+                </field>
+                <field code="H_fee" type="decimal(11,2)" null="false">
+                    <name></name>
+                </field>
+                <field code="U_name" type="varchar(30)" null="true">
+                    <name></name>
+                </field>
+                <field code="p_money" type="decimal(11,2)" null="false">
+                    <name></name>
+                </field>
+                <field code="a_money" type="decimal(11,2)" null="false">
+                    <name></name>
+                </field>
+                <field code="b_money" type="decimal(11,2)" null="false">
+                    <name></name>
+                </field>
+                <field code="Memo" type="varchar(50)" null="true">
+                    <name></name>
+                </field>
+                <field code="huikuanren" type="varchar(50)" null="true">
+                    <name></name>
+                </field>
+                <field code="p_type" type="varchar(20)" null="true">
+                    <name></name>
+                </field>
+            </fields>
+        </table>
+        <table code="systembankinfo">
+            <name>系统充值银行卡信息</name>
+            <remark />
+            <fields>
+                <field code="fId" type="int(11)" null="false">
+                    <name>fId</name>
+                </field>
+                <field code="fBankName" type="varchar(128)" null="true">
+                    <name>银行名字</name>
+                </field>
+                <field code="fOwnerName" type="varchar(128)" null="true">
+                    <name>持卡人</name>
+                </field>
+                <field code="fBankAddress" type="varchar(256)" null="true">
+                    <name>地址</name>
+                </field>
+                <field code="fBankNumber" type="varchar(128)" null="true">
+                    <name>卡号</name>
+                </field>
+                <field code="fCreateTime" type="datetime(19)" null="true">
+                    <name>创建时间</name>
+                </field>
+                <field code="fStatus" type="int(11)" null="true">
+                    <name>状态：（是否停用银行卡）</name>
+                </field>
+                <field code="version" type="int(11)" null="true">
+                    <name>版本</name>
+                </field>
+                <field code="fcode" type="varchar(100)" null="true">
+                    <name>fcode</name>
+                </field>
+            </fields>
+        </table>
+        <table code="totalview">
+            <name>统计表</name>
+            <remark />
+            <fields>
+                <field code="fuid" type="int(11)" null="false">
+                    <name>fuid</name>
+                </field>
+                <field code="ftotal" type="decimal(28,8)" null="true">
+                    <name>总数</name>
+                </field>
+                <field code="frozen" type="decimal(28,8)" null="true">
+                    <name>冻结金额</name>
+                </field>
+                <field code="regAmt" type="decimal(28,8)" null="true">
+                    <name>注册金额</name>
+                </field>
+                <field code="wAmt" type="decimal(28,8)" null="true">
+                    <name>钱包金额</name>
+                </field>
+                <field code="buy" type="decimal(28,8)" null="true">
+                    <name>买入金额</name>
+                </field>
+                <field code="sell" type="decimal(28,8)" null="true">
+                    <name>卖出金额</name>
+                </field>
+            </fields>
+        </table>
+    </tables>
+</database>

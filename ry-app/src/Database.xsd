@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:include schemaLocation="RecordSet.xsd" />
+    <xs:element name="database">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="caption" type="xs:string" />
+                <xs:element name="home" type="xs:string" />
+                <xs:element name="include" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="caption" />
+                        </xs:sequence>
+                        <xs:attribute name="filename" type="xs:string" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="tables">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="table" type="table" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="script" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="procedure" type="scriptfile" minOccurs="0" maxOccurs="unbounded" />
+                            <xs:element name="function" type="scriptfile" minOccurs="0" maxOccurs="unbounded" />
+                            <xs:element name="trigger" type="scriptfile" minOccurs="0" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="table">
+        <xs:sequence>
+            <xs:element name="name" type="caption" />
+            <xs:element name="remark" type="xs:string" />
+            <xs:element name="menus" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="item" type="MenuItem" maxOccurs="unbounded" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="fields">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="field" type="field" maxOccurs="unbounded" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="indexs" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="index" type="index" maxOccurs="unbounded" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="records" type="Records" minOccurs="0" />
+        </xs:sequence>
+        <xs:attribute name="code" type="xs:string" use="required" />
+        <xs:attribute name="custom" type="xs:boolean" />
+        <xs:attribute name="delete" type="xs:boolean" use="optional" default="false" />
+        <xs:attribute name="qcdate" type="xs:date" use="optional" />
+        <xs:attribute name="author" type="xs:string" use="optional" />
+        <xs:attribute name="database" use="optional">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="" />
+                    <xs:enumeration value="Common" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="removever" type="xs:boolean" use="optional" />
+        <xs:attribute name="movehistory" type="xs:boolean" use="optional" />
+        <!-- 是否移除历史版本记录，若为true则须建立历史版本数据表 -->
+        <!-- 是否移动历史数据记录，若为true则须建立历史数据库 -->
+    </xs:complexType>
+    <xs:complexType name="MenuItem">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="code" type="xs:string" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="field">
+        <xs:sequence>
+            <xs:element name="name" type="caption" />
+            <xs:element name="command" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="option" type="ValueOption" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="remark" type="xs:string" minOccurs="0" />
+            <xs:element name="level" type="FieldLevel" minOccurs="0" />
+            <xs:element name="select" type="FieldSelect" minOccurs="0" />
+        </xs:sequence>
+        <xs:attribute name="code" type="xs:string" use="required" />
+        <xs:attribute name="type" type="FieldType" use="required" />
+        <xs:attribute name="null" type="xs:boolean" use="required" />
+        <xs:attribute name="default" type="xs:string" use="optional" />
+        <xs:attribute name="readonly" type="xs:boolean" use="optional" />
+        <xs:attribute name="width" type="xs:integer" use="optional" />
+        <xs:attribute name="author" type="xs:string" use="optional" />
+        <xs:attribute name="delete" type="xs:boolean" use="optional" default="false" />
+        <xs:attribute name="qcdate" type="xs:date" use="optional" />
+        <xs:attribute name="group" type="FieldGroup" />
+    </xs:complexType>
+    <xs:complexType name="FieldSelect">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="type" type="SelectType" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:simpleType name="SelectType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="buffer" />
+            <xs:enumeration value="object" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="FieldLevel">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="关键栏位" />
+            <xs:enumeration value="备注栏位" />
+            <xs:enumeration value="保留栏位" />
+            <xs:enumeration value="未知栏位" />
+            <xs:enumeration value="过期栏位" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="FieldGroup">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PartCode" />
+            <xs:enumeration value="CusCode" />
+            <xs:enumeration value="SupCode" />
+            <xs:enumeration value="DeptCode" />
+            <xs:enumeration value="CWCode" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="ValueOption">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="value" type="xs:string" use="required" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:simpleType name="FieldType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="char(2)" />
+            <xs:enumeration value="char(6)" />
+            <xs:enumeration value="varchar(1)" />
+            <xs:enumeration value="varchar(2)" />
+            <xs:enumeration value="varchar(3)" />
+            <xs:enumeration value="varchar(4)" />
+            <xs:enumeration value="varchar(5)" /> <!-- 存储时间专用 -->
+            <xs:enumeration value="varchar(6)" />
+            <xs:enumeration value="varchar(10)" />
+            <xs:enumeration value="varchar(11)" />
+            <xs:enumeration value="varchar(14)" />
+            <xs:enumeration value="varchar(18)" /><!-- 料号编号 -->
+            <xs:enumeration value="varchar(20)" />
+            <xs:enumeration value="varchar(24)" />
+            <xs:enumeration value="varchar(28)" />
+            <xs:enumeration value="varchar(30)" />
+            <xs:enumeration value="varchar(32)" />
+            <xs:enumeration value="varchar(38)" /> <!-- guid专用 -->
+            <xs:enumeration value="varchar(50)" />
+            <xs:enumeration value="varchar(60)" />
+            <xs:enumeration value="varchar(64)" />
+            <xs:enumeration value="varchar(80)" />
+            <xs:enumeration value="varchar(100)" />
+            <xs:enumeration value="varchar(128)" />
+            <xs:enumeration value="varchar(180)" />
+            <xs:enumeration value="varchar(200)" />
+            <xs:enumeration value="varchar(255)" />
+            <xs:enumeration value="varchar(256)" />
+            <xs:enumeration value="varchar(300)" />
+            <xs:enumeration value="varchar(400)" />
+            <xs:enumeration value="varchar(500)" />
+            <xs:enumeration value="varchar(1000)" />
+            <xs:enumeration value="varchar(1024)" />
+            <xs:enumeration value="varchar(2000)" />
+            <xs:enumeration value="varchar(2048)" />
+            <xs:enumeration value="bit(1)" />
+            <xs:enumeration value="date(10)" />
+            <xs:enumeration value="datetime(19)" />
+            <xs:enumeration value="timestamp(19)" />
+            <xs:enumeration value="uniqueidentifier" />
+            <xs:enumeration value="bigint(19)" />
+            <xs:enumeration value="ubigint(19)" />
+            <xs:enumeration value="int(11)" />
+            <xs:enumeration value="tinyint(1)" />
+            <xs:enumeration value="tinyint(4)" />
+            <!-- <xs:enumeration value="tinyint" /> -->
+            <!-- <xs:enumeration value="smallint" /> -->
+            <xs:enumeration value="money" />
+            <xs:enumeration value="decimal(11,2)" />
+            <xs:enumeration value="decimal(16,6)" />
+            <xs:enumeration value="decimal(18,4)" />
+            <xs:enumeration value="decimal(18,6)" />
+            <xs:enumeration value="decimal(20,8)" />
+            <xs:enumeration value="decimal(28,8)" />
+            <xs:enumeration value="float" />
+            <xs:enumeration value="decimal" />
+            <xs:enumeration value="text(65535)" />
+            <xs:enumeration value="image" />
+            <xs:enumeration value="blob(65535)" />
+            <xs:enumeration value="mediumtext(16777215)" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="scriptfile">
+        <xs:sequence>
+            <xs:element name="param" type="ScriptParam" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="name" type="caption" />
+            <xs:element name="remark" type="xs:string" minOccurs="0" />
+        </xs:sequence>
+        <xs:attribute name="code" type="xs:string" use="required" />
+        <xs:attribute name="filename" type="xs:string" use="required" />
+        <xs:attribute name="delete" type="xs:boolean" use="optional" default="false" />
+        <xs:attribute name="author" type="xs:string" use="optional" />
+        <xs:attribute name="qcdate" type="xs:date" use="optional" />
+    </xs:complexType>
+    <xs:complexType name="ScriptParam">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="remark" type="xs:string" minOccurs="0" />
+        </xs:sequence>
+        <xs:attribute name="code" type="xs:string" use="required" />
+        <xs:attribute name="type" type="FieldType" use="required" />
+        <xs:attribute name="data" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="in" />
+                    <xs:enumeration value="out" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="default" type="xs:string" />
+    </xs:complexType>
+    <xs:complexType name="index">
+        <xs:sequence>
+            <xs:element name="field" type="IndexField" maxOccurs="unbounded" />
+            <xs:element name="include" type="IndexInclude" minOccurs="0" />
+            <xs:element name="error" type="caption" minOccurs="0" />
+        </xs:sequence>
+        <xs:attribute name="code" type="xs:string" use="required" />
+        <xs:attribute name="type" type="IndexType" use="required" />
+        <xs:attribute name="clustered" type="xs:boolean" use="optional" />
+        <xs:attribute name="delete" type="xs:boolean" use="optional" default="false" />
+        <xs:attribute name="qcdate" type="xs:date" use="optional" />
+    </xs:complexType>
+    <xs:simpleType name="IndexType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="primary" />
+            <xs:enumeration value="unique" />
+            <xs:enumeration value="normal" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="IndexField">
+        <xs:attribute name="code" type="xs:string" use="required" />
+        <xs:attribute name="sort" type="sort" use="required" />
+    </xs:complexType>
+    <xs:simpleType name="sort">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ASC" />
+            <xs:enumeration value="DESC" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="IndexInclude">
+        <xs:sequence>
+            <xs:element name="field" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="code" type="xs:string" use="required" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="caption">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="lang" type="xs:string" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="Records">
+        <xs:sequence>
+            <xs:element name="record" type="Record" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="mincount" type="xs:integer" use="required" />
+        <xs:attribute name="maxcount" type="xs:integer" use="required" />
+    </xs:complexType>
+</xs:schema>

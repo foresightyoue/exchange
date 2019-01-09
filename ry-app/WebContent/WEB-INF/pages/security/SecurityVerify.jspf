@@ -1,0 +1,83 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+
+<html>
+	<head>
+	   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	</head>
+<link rel="stylesheet" type="text/css" href="/static/front/app/css/transfer.css">
+<c:if test="${empty securityEnvironment}">
+	<div style="position: relative;">
+		<ul class="verify-list">
+            <li class="first">
+                <img alt="" src="/static/front/images/yanzheng.png" class="yanzheng"><input type="text" maxlength="6" id="securityCode" placeholder="请输入验证码" name="securityCode">
+                <button type="button" onclick="sendSecurityCode(false)" class="codes" id="codes">获取验证码</button>
+            </li>
+            <li id="sendVoice" style="display: none">
+                <span class="codes" id="voice_t" style="margin-right: 56px;color: #333" >收不到验证码？</span>
+                <button type="button" onclick="sendSecurityCode(true)" class="codes" id="voice">发送语音</button>
+            </li>
+        </ul>
+        
+          <div id="sec-msg">${empty message ? "" :message }</div>
+	</div>
+	<script>
+		var countdown=120; 
+		function sendemail() {
+			var obj = $("#codes");
+			settime(obj);
+		}
+		function settime(obj) { //发送验证码倒计时
+			if (countdown == 0) {
+				obj.attr('disabled', false);
+				obj.html("获取验证码");
+				countdown = 120;
+
+
+				$("#sec-msg").text("");
+				$("#sendVoice").css("display","");
+				return;
+			} else {
+				obj.attr('disabled', true);
+				obj.html(countdown + "s后重发");
+				countdown--;
+			}
+			setTimeout(function() {
+				settime(obj)
+			}, 1000)
+		}
+		function sendSecurityCode(sendVoice) {
+			$("#sec-msg").text("");
+			var url = '/user/sendSMS.html';
+			if (window.location.pathname.indexOf("ssadmin") > -1) {
+				url = '/ssadmin/sendSMS.html';
+			}
+			$.ajax({
+				url : url,
+				timeout : 4000,
+				dataType : 'json',
+				data : {
+					'sendVoice' : sendVoice
+				},
+				type : 'post',
+				cache : false,
+				async : true,
+				success : function(resp) {
+					if (resp.result == true) {
+						sendemail();
+						$("#sendVoice").css("display","none");
+						$("#sec-msg").text(resp.message);
+					} else {
+						$("#sec-msg").text("发送失败：" + resp.message);
+					}
+				},
+				error : function(err) {
+					$("#sec-msg").text("发送失败：网络失败，请再试一次");
+				}
+			});
+		}
+	</script>
+</c:if>
+</html>

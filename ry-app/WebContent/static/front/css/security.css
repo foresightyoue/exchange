@@ -1,0 +1,253 @@
+@media screen and (max-width: 768px) {
+	/* html {
+		 font-size:15px;
+	} */
+	.promptMessage{
+		padding: 1rem .255rem .51rem;
+		text-align: center;
+		font-size: .238rem;
+	}
+	button[name='checkSecurity']{
+	    width: 39%; 
+	    margin: 0 5%;
+		height: .8rem;
+		color: white;
+		background-color: #31435b;
+		border-radius: .1rem;
+	}
+	.indexPage{
+	    color: white;
+	    width: 39%;
+	    margin: 0 5%;
+	    height: .8rem;
+	    color: white;
+	    background-color: #31435b;
+	    border-radius: .1rem;
+	    float: right;
+	    text-align: center;
+	    line-height: 50px;
+	    margin-top: 1rem;
+	    font-size: .272rem;
+	}
+	body{
+		background-color: #fff !important;
+		color: #333;
+	}
+	.hint{
+		line-height: 3.06rem;
+		text-align: left;
+		padding-left: .62rem;
+	}
+	nav {
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    z-index: 9;
+	    padding-top: .34rem;
+	    background: #31435b;
+	}
+	.Personal-title {
+		width: 100%;
+		text-align: center;
+		padding: 0.255rem 0;
+		font-size: .306rem;
+		color: #fff;
+		background: #31435b;
+		position: relative;
+		z-index: 99;
+	}
+	.verify-list{
+		width:100%;
+		display:block;
+	}
+	.verify-list>li{	
+		padding-left: .255rem;
+		padding-right: .255rem;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		position: relative;
+		overflow: hidden;
+		color: #333;
+		line-height: .85rem;
+	}
+	.verify-list>li.first{
+		border-bottom:1px solid #e6e6e6;
+	}
+	.verify-list>li.first span{
+		width: 4.376rem;
+		float:left;
+	}
+	.verify-list>li input{
+		font-size: .255rem;
+		color: #333;
+		outline: none;
+		border: 0;
+		background: transparent;
+		width: 3rem;
+	}
+ 	.yanzheng{
+		width: .34rem;
+		margin-right: .34rem;
+		float: left;
+		margin-top: 0.23rem;				
+	}
+	.pcMars{
+		display: none;
+	}
+	.container{
+		padding-top: 1.27rem;
+	}
+	#codes{
+		position: absolute;
+		right: .255rem;
+		color: #BA8C3E;
+		height: .85rem;
+		line-height: .85rem;
+		font-size: .255rem;
+		padding: 0;
+	}
+	#sec-msg{
+		padding: .17rem .255rem;
+		color: red;
+		text-align: left;
+		font-size: .187rem;
+	}
+	#sure{
+		margin-top: 1rem;
+		font-size: .272rem;
+	}
+}
+@media screen and (min-width: 768px)  {
+	body{
+		background-color: #fff !important;
+		position: relation;
+	}
+	.pcMars{
+		width: 100%;
+		height: 100%;
+		Position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+		display: block;
+		background-color: #00000036;
+	}
+	.container{
+		position: absolute;
+		z-index: 10000;
+		background-color: #fff;
+		padding-bottom: 20px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	.promptMessage{
+		padding: 50px 15px 30px;
+	    text-align: center;
+	    font-size: 15px;
+	}
+	button[name='checkSecurity']{
+	    width: 40%; 
+	    margin: 0 5%;
+	    height: 50px;
+	    color: white;
+	    background-color: #31435b;
+	    border-radius: 10px;
+	}
+	.indexPage{
+	    color: white;
+	    float: right;
+	    width: 40%;
+	    margin: 0 5%;
+	    height: 50px;
+	    color: white;
+	    line-height: 50px;
+	    background-color: #31435b;
+	    border-radius: 10px;
+	    text-align: center;
+	    margin-top: 80px;
+	    font-size: 16px;
+    }
+	body{
+		background-color: #fff !important;
+		color: #333;
+	}
+	.hint{
+		line-height: 50px;
+		text-align: left;
+		padding-left: 15px;
+	}
+	nav {
+	    width: 100%;
+	    z-index: 10000;
+	    background: #31435b;
+	}
+	.Personal-title {
+	    width: 100%;
+	    text-align: center;
+	    padding: 20px 0;
+	    font-size: 18px;
+	    color: #fff;
+	    background: #31435b;
+	    position: relative;
+	    z-index: 99;
+	}
+	.verify-list{
+		width:100%;
+		display:block;
+	}
+	.verify-list>li{	
+		padding-left:15px;
+		padding-right:15px;
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+		position:relative;
+		overflow:hidden;
+		color:#333;
+		height: 50px;
+		line-height:50px;
+	}
+	.verify-list>li.first{
+		border-bottom:1px solid #e6e6e6;
+	}
+	.verify-list>li.first span{
+		width: 50px;
+		float:left;
+	}
+	.verify-list>li input{
+		font-size: 15px;
+		color: #333;
+		outline: none;
+		border: 0;
+		background: transparent;
+		width: 200px;
+		float: left;
+		margin-top: 15px;
+	}
+ 	.yanzheng{
+		width: 20px;
+		margin-right: 20px;
+		float: left;
+		margin-top: 13px;					
+	}
+	#codes,#voice,#voice_t{
+		position: absolute;
+		right: 15px;
+		color: #BA8C3E;
+		height: 50px;
+		line-height: 50px;
+		font-size: 15px;
+		padding: 0;
+	}
+	#sec-msg{
+		padding: 10px 15px;
+		color: red;
+		text-align: left;
+		font-size: 12px;
+	}
+	#sure{
+		margin-top: 80px;
+		font-size: 16px;
+	}
+}

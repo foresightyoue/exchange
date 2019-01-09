@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="RecordSet" type="RecordSet"/>
+	<xs:complexType name="RecordSet">
+		<xs:sequence>
+			<xs:element name="table" type="Table" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Table">
+		<xs:sequence>
+			<xs:element name="record" type="Record" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="code" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="Record">
+		<xs:sequence>
+			<xs:element name="field" type="RecordField" maxOccurs="unbounded"/>
+			<xs:element name="memofield" type="RecordMemofield" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="need" type="xs:boolean" use="optional" default="false"/>
+		<xs:attribute name="delete" type="xs:boolean" use="optional" default="false"/>
+		<xs:attribute name="author" type="xs:string" use="optional"/>
+		<xs:attribute name="qcdate" type="xs:date" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="RecordField">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="code" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="RecordMemofield">
+		<xs:sequence>
+			<xs:element name="line" type="xs:string" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="code" type="xs:string" use="required"/>
+	</xs:complexType>
+</xs:schema>

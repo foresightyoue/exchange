@@ -1,0 +1,120 @@
+.text-danger{
+    color: #E81817 !important;
+}
+.container{
+    width: 95%;
+    /* height: 95%; */
+    height: 80%;
+    background-color: #fff;
+    margin: 0 auto;
+    min-width: 1000px;
+    min-height: 700px;
+}
+.title{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 26px;
+}
+.order_details{
+    width: 100%;
+    height: 90%;
+    padding: 0 20px 20px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    /* background-color: #E5E5E5; */
+}
+.order_details_hint{
+    height: 60px;
+    line-height: 60px;
+    /* background-color: #E5E5E5; */
+    font-size: 16px;
+    padding-left: 20px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.order_details_hint img{
+	width: 20px;
+}
+.messageBox{
+    width: 100%;
+    height: 86.5%;
+    padding: 20px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    background-color: #fff;
+}
+.order_messageBox,.deal_operationBox{
+    width: 48%;
+    height: 100%;
+    border: 1px solid #e6e6e6;
+}
+.hint{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #e6e6e6;
+    padding-left: 20px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+	font-size: 15px;
+	font-weight: 600;
+}
+.order_message{
+    line-height: 250%;
+    padding-top: 3%;
+    padding-left: 15%;
+}
+.order_message li{
+    font-size: 14px;
+    color: #808080;
+}
+.order_message .message_hint {
+    width: 25%;
+    display: inline-block;
+    font-size: 15px;
+    color: #333;
+}
+.deal_operation{
+    line-height: 250%;
+    padding-top: 3%;
+    padding-left: 15%;
+}
+.deal_operation li{
+    font-size: 14px;
+    color: #808080;
+}
+.deal_operation .message_hint {
+    width: 30%;
+    display: inline-block;
+    font-size: 15px;
+    color: #333;
+}
+.text_hint{
+	padding-left: 15%;
+	padding-right: 20px;
+	margin-top: 20px;
+	color: #808080;
+}
+.btn_sure{
+    margin-left: 15%;
+    margin-top: 5%;
+    width: 50%;
+    height: 10%;
+    background-color: #FF9800;
+    text-align: center;
+    font-size: 20px;
+    line-height: 250%;
+    cursor: pointer;
+    color: white;
+}
